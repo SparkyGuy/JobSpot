@@ -1,0 +1,250 @@
+*{
+    margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  @font-face{
+    font-family: dunkin;
+    src: url('./fonts/Dunkin/Dunkin.otf');
+  }
+  ::placeholder{
+    font-weight: bold;
+    font-size: 1em;
+    padding: 5px;
+    color: black;
+  }
+  .login{
+    font-family: dunkin;
+    color: #544384;
+  }
+  body {
+    background-image: url('../images/background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .container{
+  display: flex;
+  }
+  .componente{
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+  }
+  .componente2{
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+  }
+  .quadrado{
+    display: block;
+    margin-left: 10vh;
+    margin-top: 27vh;
+    align-items: center;
+    background-color: #ddddf7;
+    max-width: 80vh;
+    height: 50vh;
+    border-radius: 20px;
+    justify-content: space-around;
+    border-color: #323232;
+    border: #323232;
+  }
+  .image-login{
+    margin-top: 20vh;
+  align-items: center;
+  }
+  .email, .password{
+    margin-top: 4vh;
+    justify-content: space-around;
+    text-decoration: none; 
+    height: 7vh;
+    width: 68vh;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #c1c1e5;
+  }
+  .name{
+    border-style: none;
+    margin-top: 3vh;
+    justify-content: space-around;
+    text-decoration: none; 
+    height: 7vh;
+    width: 68vh;
+    border-radius: 10px;
+    background-color: #c1c1e5;
+    border-style: none;
+  }
+  .texto{
+    justify-content: space-around;
+    text-decoration: none;
+  }
+  .top{
+    justify-content: center;
+    display: table-row;
+  }
+  .surname{
+    
+    border-style: none;
+    margin-top: 4vh;
+    justify-content: space-around;
+    text-decoration: none; 
+    height: 7vh;
+    width: 68vh;
+    border-radius: 10px;
+    background-color: #c1c1e5;
+    border-style: none;
+  }
+  input:focus, input:hover, 
+  textarea:focus, textarea:hover,
+  select:focus, select:hover {
+      outline: none !important;
+      border: none !important;
+  }
+  .input1{
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+  .registrar-botao{
+      margin-top: 3vh;
+      margin-left: 50vh;
+  }
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    box-shadow: 0 0 5px 1px white;
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #6e5a6f;
+    border-radius: 1.625rem;
+  }
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #dfdff6;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: dunkin;
+  }
+  button:hover .circle {
+    width: 80%;
+    box-shadow: 0 0 10px 2px white;
+  }
+  button:hover .button-text {
+    transform: translate(-1.7rem, 0);
+  }
+  button:active .circle .icon.arrow {
+    transform: translate(9.5rem, 0);
+    transition: all 0.3s;
+  }
+  button:active .circle {
+    transform: scale(0.9);
+    transition: all 0.3s;
+    box-shadow: 0 0 5px 0.5px white;
+  }
+  button:hover .button-text {
+    color: #fff;
+  }
+  button:active .button-text {
+    color: #6e5a6f;
+  }
+  @media (min-height: 400px) and (max-width: 700px) {
+  .componente{
+      width: 100%;
+      background-color: #c1c1e5;
+    } 
+  .componente2{
+      width: 0px;
+    }
+    .image-login{
+      opacity: 0%;
+    }
+  
+    .quadrado{
+  width: 70%;
+    }
+    .email, .password{ 
+      height: 7vh;
+      width: 70%;
+    }
+    .surname, .name{
+      border-style: none;
+      justify-content: space-between;
+      text-decoration: none; 
+      height: 7vh;
+      width: 70%;
+      border-radius: 10px;
+      background-color: #c1c1e5;
+    }
+    .botao{
+      margin-left: 10vh;
+    }
+    .registrar-botao{
+      margin-top: 7vh;
+      margin-left: 15vh;
+  
+  }
+  }
+  .meio{
+    font-weight: bold;
+    font-size: 6vh;
+  padding-top: 6vh;
+  
+  }
+  .lock-icon{
+    align-items: center;
+  }
