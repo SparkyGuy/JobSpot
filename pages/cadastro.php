@@ -1,0 +1,62 @@
+<?php
+include ('../config/conexao.php');
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Styles/cadastro.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar-se</title>
+</head>
+<body>
+     <div class="container">
+      <div class="componente2">
+      </div>
+      <div class="componente">
+          <div class="quadrado2">
+
+              <div class="texto">
+                <div class="meio">
+                <form action="">
+              <label class="text-cadastro">Cadastro</label>
+              </div>
+              <div class="input1">
+                <MdOutlinePerson/>
+                <input type="text" class="name" placeholder='Nome:'></input>
+              </div>
+              <div class="input1">
+                <BiPencil/>
+                <input type="text" class="surname" placeholder='Sobrenome:'></input>
+              </div>
+                <div class="texto">
+                  <MdOutlineMail/>
+                <input type="text" class="email" placeholder='E-mail:'></input>
+                </div>
+                <div class="texto">
+                  <BiLockAlt/>
+                <input type="password" class="password" placeholder='Senha:'></input>
+                </div> 
+              </div>
+              <script>
+                function redirect() {
+                  window.location.href="login.html";  //link redirecionado
+                }
+              </script>
+              <div class="registrar-botao2">
+                              <button type="submit" onClick="window.location.href='login.html';" class="learn-more"> <!-- Link Redirecionado -->
+                  <span aria-hidden="true" class="circle">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text2">registrar</span>
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
+
