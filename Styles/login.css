@@ -1,6 +1,8 @@
+html { overflow-y: hidden; }
 *{
     margin:0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   }
   @font-face{
@@ -13,8 +15,8 @@
     padding: 5px;
     color: black;
   }
-  .login{
-    font-family: dunkin;
+  .login-text{
+     font-family: 'Poppins', sans-serif;
     color: #544384;
   }
   body {
@@ -41,7 +43,7 @@
   .quadrado{
     display: block;
     margin-left: 10vh;
-    margin-top: 27vh;
+    margin-top: 18vh;
     align-items: center;
     background-color: #ddddf7;
     max-width: 80vh;
@@ -248,3 +250,63 @@
   .lock-icon{
     align-items: center;
   }
+
+   
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    align-items: center;
+    color: #202020;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.nav-itens {
+    list-style: none;
+    display: flex;
+}
+
+.nav-itens>li>a {
+    padding-left: 20px;
+    color: #202020;
+    text-decoration: none;
+}
+
+.login{
+    padding: 10px 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #202020;
+    border-color: #6e5a6f;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.cadastro {
+    padding: 10px 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #6e5a6f;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 1s background;
+
+}
+
+.cadastro:hover {
+    background-color: #3d3d3d;
+    transition: 1s background;
+}

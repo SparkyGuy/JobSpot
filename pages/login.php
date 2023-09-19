@@ -1,8 +1,5 @@
 <?php
 include('../config/conexao.php');
-
-
-
 if(isset($_POST['email']) || isset($_POST['senha'])) {
 
   if(strlen($_POST['email']) == 0) {
@@ -10,28 +7,19 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
   } else if(strlen($_POST['senha']) == 0) {
       echo "Preencha sua senha";
   } else {
-
       $email = $mysqli->real_escape_string($_POST['email']);
       $senha = $mysqli->real_escape_string($_POST['senha']);
-
       $sql_code = "SELECT * FROM clientes WHERE email = '$email' AND senha = '$senha'";
       $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: ".$mysqli->error);
-
       $quantidade = $sql_query->num_rows;
-
-      if($quantidade == 1) {
-          
+      if($quantidade == 1) { 
           $usuario = $sql_query->fetch_assoc();
-
           if(!isset($_SESSION)) {
               session_start();
           }
-
           $_SESSION['id'] = $usuario['id'];
           $_SESSION['nome'] = $usuario['nome'];
-
-          header("Location: painel.php");    // redirecionar pra homepage :)
-
+          header("Location: homepage.php");    // redirecionar pra homepage :)
       } else {
           echo "Falha ao logar! E-mail ou senha incorretos";
       }
@@ -42,6 +30,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Styles/login.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +40,21 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <title>Login</title>
 </head>
 <body>
+<nav>
+        <div class="logo">GabiCode</div>
+        <div class="links">
+            <ul class="nav-itens">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About us</a></li>
+               <li><a href="#">Preços</a></li>
+               <li><a href="#">Suporte</a></li>
+            </ul>
+        </div>
+        <div class="btn">
+
+            <button href="#" onClick="window.location.href='cadastro.php'" class="cadastro">Cadastro</button>
+        </div>
+    </nav>
     <div class="container">
         <div class="componente2">
           <div class="image-login">
@@ -61,7 +67,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                 <div class="texto">
                   <div class="meio">
                     <form action="" method="POST">
-                        <label class="login"> Login </label>
+                        <label class="login-text"> Login </label>
                         </div>
                           <div class="texto">
                             <MdOutlineMail/>
