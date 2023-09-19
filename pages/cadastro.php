@@ -1,7 +1,24 @@
 <?php
 include ('../config/conexao.php');
 
+
+    if(isset($_POST['submit']))
+    {
+
+        include_once('../config/conexao.php');
+
+        $nome = $_POST['nome'];
+        $sobrenome = $_POST['sobrenome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        $result = mysqli_query($mysqli, "INSERT INTO clientes(nome,sobrenome,email,senha) 
+        VALUES ('$nome','$sobrenome','$email','$senha')");
+
+        header('Location: login.php');
+    }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,24 +38,24 @@ include ('../config/conexao.php');
 
               <div class="texto">
                 <div class="meio">
-                <form action="">
+                <form action="cadastro.php" method="POST">
               <label class="text-cadastro">Cadastro</label>
               </div>
               <div class="input1">
                 <MdOutlinePerson/>
-                <input type="text" class="name" placeholder='Nome:'></input>
+                <input type="text" id="nome" name="nome" class="name" placeholder='Nome:' required></input>
               </div>
               <div class="input1">
                 <BiPencil/>
-                <input type="text" class="surname" placeholder='Sobrenome:'></input>
+                <input type="text" id="sobrenome" name="sobrenome" class="surname" placeholder='Sobrenome:' required></input>
               </div>
                 <div class="texto">
                   <MdOutlineMail/>
-                <input type="text" class="email" placeholder='E-mail:'></input>
+                <input type="text" id="email" name="email" class="email" placeholder='E-mail:' required></input>
                 </div>
                 <div class="texto">
                   <BiLockAlt/>
-                <input type="password" class="password" placeholder='Senha:'></input>
+                <input type="password" id="senha" name="senha" class="password" placeholder='Senha:' required></input>
                 </div> 
               </div>
               <script>
@@ -47,7 +64,7 @@ include ('../config/conexao.php');
                 }
               </script>
               <div class="registrar-botao2">
-                              <button type="submit" onClick="window.location.href='login.html';" class="learn-more"> <!-- Link Redirecionado -->
+                              <button type="submit" id="submit" onClick="window.location.href='login.html';" class="learn-more"> <!-- Link Redirecionado -->
                   <span aria-hidden="true" class="circle">
                   <span class="icon arrow"></span>
                   </span>
