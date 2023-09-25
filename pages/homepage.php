@@ -32,9 +32,22 @@
             <button href="#" class="profile-pic">
             <i class="fa-regular fa-user" style="color: #6e4474; font-size: 20px;"></i>
             </button>
-
         </div>
-
     </nav>
+
+    <div class="product-card">
+    <img src="../images/pedreiro.jpg" alt="">
+    <h4>João Gomes</h4>
+    <hr>
+    <br>
+    <h5>Pedreiro</h5>
+        <h6>(16)99119-0088</h6>
+    
+    <div>
+        <span>$299</span>
+        <button>+</button>
+    </div>
+</div>
+
 </body>
 </html>
