@@ -1,7 +1,5 @@
 <?php
-
 include('../config/protect.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +13,7 @@ include('../config/protect.php');
     <link rel="stylesheet" href="../Styles/homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" >
     <script src="../script/scripts.js" defer></script>
 </head>
 <body>
@@ -46,7 +44,10 @@ include('../config/protect.php');
             </button>
         </div>
     </nav>
-
+<div class="container">
+    <div class="outdoor">
+        <img src="../images/zoeira.jpg">
+</div>
     <div class="product-card">
     <img src="../images/pedreiro.jpg" alt="">
     <h4>João Gomes</h4>
@@ -63,6 +64,62 @@ include('../config/protect.php');
 </div>
 <div class="product-card">
     <img src="../images/pedreiro.jpg" alt="">
+    <h4>João Gomes</h4>
+    <hr>
+    <br>
+    <h5>Pedreiro</h5>
+        <h6>(16)99119-0088</h6>
+    
+    <div>
+        <span>$299</span>
+        <button id="open-modal">+</button>
+    </div>
+    
+</div>
+<div class="product-card">
+    <img src="../images/pedreiro.jpg" alt="">
+    <h4>João Gomes</h4>
+    <hr>
+    <br>
+    <h5>Pedreiro</h5>
+        <h6>(16)99119-0088</h6>
+    
+    <div>
+        <span>$299</span>
+        <button id="open-modal">+</button>
+    </div>
+    
+</div>
+<div class="product-card">
+    <img src="../images/pedreiro.jpg" alt="">
+    <h4>João Gomes</h4>
+    <hr>
+    <br>
+    <h5>Pedreiro</h5>
+        <h6>(16)99119-0088</h6>
+    
+    <div>
+        <span>$299</span>
+        <button id="open-modal">+</button>
+    </div>
+    
+</div>
+<div class="product-card">
+    <img src="../images/pedreiro.jpg" alt="">
+    <h4>João Gomes</h4>
+    <hr>
+    <br>
+    <h5>Pedreiro</h5>
+        <h6>(16)99119-0088</h6>
+    
+    <div>
+        <span>$299</span>
+        <button id="open-modal">+</button>
+    </div>
+    
+</div>
+<div class="product-card">
+    <img src="../images/pedreiro.jpg" alt="" >
     <h4>João Gomes</h4>
     <hr>
     <br>
@@ -120,9 +177,12 @@ include('../config/protect.php');
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     It has survived not only five centuries, but also the leap into electronic typesetting, 
                 </h2>
-                <h3>Contato</h3>
+                    <h3>Contato</h3>
                 <div class="links">
-                    <i class="fa-brands fa-whatsapp fa-lg"></i>
+                    <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i>
+                    <i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i>
+                    <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
+                    <i class="fi fi-rr-car-mechanic"></i>
                 </div>
             </div>
             <div class="elemento2">
