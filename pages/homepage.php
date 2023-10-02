@@ -10,6 +10,11 @@ include('../config/protect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="../Styles/homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,91 +53,133 @@ include('../config/protect.php');
     <div class="outdoor">
         <img src="../images/zoeira.jpg">
 </div>
+<div class="icones-container">
+    <div class="icones">
+        <div class="obj">
+            <i class="fi fi-rr-car-mechanic"></i>
+        </div>
+    </div>
+    <div class="icones">
+            <i class="fi fi-rr-key"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rs-truck-side"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-broom"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-child-head"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-gym"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-gym"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rs-flower-tulip" ></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-building"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-barber-shop"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-soap"></i>
+    </div>
+    <div class="icones">
+    <i class="fi fi-rr-paint-roller"></i>
+    </div>
+ 
+    
+</div>
+<div class="card-container">
     <div class="product-card">
-    <img src="../images/pedreiro.jpg" alt="">
-    <h4>João Gomes</h4>
-    <hr>
-    <br>
-    <h5>Pedreiro</h5>
-        <h6>(16)99119-0088</h6>
-    
-    <div>
-        <span>$299</span>
-        <button id="open-modal">+</button>
-    </div>
-    
-</div>
-<div class="product-card">
-    <img src="../images/pedreiro.jpg" alt="">
-    <h4>João Gomes</h4>
-    <hr>
-    <br>
-    <h5>Pedreiro</h5>
-        <h6>(16)99119-0088</h6>
-    
-    <div>
-        <span>$299</span>
-        <button id="open-modal">+</button>
-    </div>
-    
-</div>
-<div class="product-card">
-    <img src="../images/pedreiro.jpg" alt="">
-    <h4>João Gomes</h4>
-    <hr>
-    <br>
-    <h5>Pedreiro</h5>
-        <h6>(16)99119-0088</h6>
-    
-    <div>
-        <span>$299</span>
-        <button id="open-modal">+</button>
-    </div>
-    
-</div>
-<div class="product-card">
-    <img src="../images/pedreiro.jpg" alt="">
-    <h4>João Gomes</h4>
-    <hr>
-    <br>
-    <h5>Pedreiro</h5>
-        <h6>(16)99119-0088</h6>
-    
-    <div>
-        <span>$299</span>
-        <button id="open-modal">+</button>
-    </div>
-    
-</div>
-<div class="product-card">
-    <img src="../images/pedreiro.jpg" alt="">
-    <h4>João Gomes</h4>
-    <hr>
-    <br>
-    <h5>Pedreiro</h5>
-        <h6>(16)99119-0088</h6>
-    
-    <div>
-        <span>$299</span>
-        <button id="open-modal">+</button>
-    </div>
-    
-</div>
-<div class="product-card">
-    <img src="../images/pedreiro.jpg" alt="" >
-    <h4>João Gomes</h4>
-    <hr>
-    <br>
-    <h5>Pedreiro</h5>
-        <h6>(16)99119-0088</h6>
-    
-    <div>
-        <span>$299</span>
-        <button id="open-modal">+</button>
-    </div>
-    
-</div>
+        <img src="../images/pedreiro.jpg" alt="">
+        <h4>João Gomes</h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
 
+        <div>
+            <span>$299</span>
+            <button id="open-modal">+</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="../images/pedreiro.jpg" alt="">
+        <h4>João Gomes</h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
+
+        <div>
+            <span>$299</span>
+            <button id="open-modal">+</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="../images/pedreiro.jpg" alt="">
+        <h4>João Gomes</h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
+
+        <div>
+            <span>$299</span>
+            <button id="open-modal">+</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="../images/pedreiro.jpg" alt="">
+        <h4>João Gomes</h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
+
+        <div>
+            <span>$299</span>
+            <button id="open-modal">+</button>
+        </div>    
+    </div>
+
+    <div class="product-card">
+        <img src="../images/pedreiro.jpg" alt="">
+        <h4>João Gomes</h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
+
+        <div>
+            <span>$299</span>
+            <button id="open-modal">+</button>
+        </div>   
+    </div>
+
+    <div class="product-card">
+        <img src="../images/pedreiro.jpg" alt="" >
+        <h4>João Gomes</h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
+
+        <div>
+            <span>$299</span>
+            <button id="open-modal">+</button>
+        </div>
+    </div>
+</div>
 <script>
     const profilePicButton = document.querySelector('.profile-pic');
     const tooltip = document.getElementById('tooltip');
