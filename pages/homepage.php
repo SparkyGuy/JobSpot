@@ -10,6 +10,7 @@ include('../config/protect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -26,13 +27,15 @@ include('../config/protect.php');
         <div >
             <img src="../images/logo-vector.svg" class="logo">
         </div>
-        <div class="links">
-            <ul class="nav-itens">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About us</a></li>
-               <li><a href="#">Preços</a></li>
-               <li><a href="#">Suporte</a></li>
-            </ul>
+        <div class="search-container">
+		<div class="search_wrap search_wrap_1">
+			<div class="search_box">
+				<input type="text" class="input" placeholder="search...">
+				<div class="btn btn_common">
+					<i class="fas fa-search"></i>
+				</div>
+			</div>
+		</div>
         </div>
         <div class="btn">
             <button href="#" class="plus-button">
@@ -55,42 +58,52 @@ include('../config/protect.php');
 </div>
 <div class="icones-container">
     <div class="icones">
-        <div class="obj">
             <i class="fi fi-rr-car-mechanic"></i>
-        </div>
+            <label>Mecânico</label>
     </div>
     <div class="icones">
             <i class="fi fi-rr-key"></i>
+            <label>Chaveiro</label>
     </div>
     <div class="icones">
-    <i class="fi fi-rs-truck-side"></i>
+        <i class="fi fi-rs-truck-side"></i>
+        <label>Entregador</label>
     </div>
     <div class="icones">
     <i class="fi fi-rr-broom"></i>
+    <label>Faxineiro</label>
     </div>
     <div class="icones">
     <i class="fi fi-rr-child-head"></i>
+    <label>Babá</label>
     </div>
     <div class="icones">
     <i class="fi fi-rr-gym"></i>
+    <label>Personal</label>
     </div>
     <div class="icones">
-    <i class="fi fi-rr-gym"></i>
+    <i class="fi fi-rr-block-brick"></i>
+    <label>Pedreiro</label>
     </div>
     <div class="icones">
     <i class="fi fi-rs-flower-tulip" ></i>
+    <label>Jardineiro</label>
     </div>
     <div class="icones">
     <i class="fi fi-rr-building"></i>
+    <label>Porteiro</label>
     </div>
     <div class="icones">
-    <i class="fi fi-rr-barber-shop"></i>
+    <i class="fi fi-br-scissors"></i>
+    <label>Barbeiro</label>
     </div>
     <div class="icones">
     <i class="fi fi-rr-soap"></i>
+    <label>Esteticista</label>
     </div>
     <div class="icones">
     <i class="fi fi-rr-paint-roller"></i>
+    <label>Pintor</label>
     </div>
  
     
@@ -229,7 +242,6 @@ include('../config/protect.php');
                     <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i>
                     <i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i>
                     <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
-                    <i class="fi fi-rr-car-mechanic"></i>
                 </div>
             </div>
             <div class="elemento2">
