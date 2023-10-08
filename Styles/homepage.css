@@ -8,9 +8,8 @@ nav {
     display: flex;
     justify-content: space-around;
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
     align-items: center;
-    color: #202020;
+    background-color: rgb(245, 245, 245);
 }
 
 .logo {
@@ -45,10 +44,11 @@ nav {
     margin-left: 35vh;
 }
 .product-card {
+    margin-top: 10px;
     transition: transform 0.3s;
     display: inline-block; 
     margin-right: 15px;
-    max-width: 30vh;
+    max-width: 32vh;
     background-color: #fff;
     padding: 1em;
     box-shadow: 0 5px 5px #e1e1e1;
@@ -278,27 +278,25 @@ display: block;
 .outdoor{
   align-items: center;
   margin-top: 5vh;
-
-
 }
 
 .outdoor img {
-  width: 190vh;
+  width: 213vh;
   border-radius: 15px;
-  height:  40vh;
+  height:  60vh;
 }
 
 .card-container{
   margin-top: 2vh;
+  margin-left: 20px;
 }
 
 .icones-container{
   margin-top:2vh;
-  align-items: center;
-  margin-left:1vh;
   justify-content: space-between;
-  padding: 10px;
+  padding: 6px;
   align-items: center;
+
   
 }
 
@@ -315,7 +313,7 @@ display: block;
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 35px;
   transition: transform 0.3s;
 }
 
@@ -372,7 +370,8 @@ i{
 .search_wrap .search_box{
 	position: relative;
 	width: 500px;
-	height: 50px;
+	height: 35px;
+  border-radius: 15px;
 }
 
 .search_wrap .search_box .input{
@@ -384,6 +383,7 @@ i{
 	padding: 10px 20px;
 	border-radius: 3px;
 	font-size: 18px;
+  border-radius: 15px;
 }
 
 .search_wrap .search_box .btn{
@@ -398,7 +398,7 @@ i{
 }
 
 .search_wrap .search_box .btn:hover{
-	background: #708bd2;	
+	background: #708bd2;
 }
 
 .search_wrap .search_box .btn.btn_common .fas{
@@ -414,6 +414,7 @@ i{
 	right: 0;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
+  border-radius: 12px;
 }
 
 .search_wrap.search_wrap_1 .search_box .input,
@@ -469,4 +470,13 @@ i{
 .search_wrap.search_wrap_5 .search_box .input,
 .search_wrap.search_wrap_6 .search_box .input{
 	padding-right: 145px;
+}
+
+.text-prof{
+  margin-top: 80px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: bold;
+  color: #544384;
 }

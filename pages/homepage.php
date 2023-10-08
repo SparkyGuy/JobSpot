@@ -10,6 +10,9 @@ include('../config/protect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -25,7 +28,7 @@ include('../config/protect.php');
 <body>
     <nav>
         <div >
-            <img src="../images/logo-vector.svg" class="logo">
+            <img src="../images/logo.png" class="logo">
         </div>
         <div class="search-container">
 		<div class="search_wrap search_wrap_1">
@@ -54,7 +57,7 @@ include('../config/protect.php');
     </nav>
 <div class="container">
     <div class="outdoor">
-        <img src="../images/zoeira.jpg">
+        <img src="../images/image-teste.jpg">
 </div>
 <div class="icones-container">
     <div class="icones">
@@ -93,7 +96,7 @@ include('../config/protect.php');
     <i class="fi fi-rr-building"></i>
     <label>Porteiro</label>
     </div>
-    <div class="icones">
+ <!-- <div class="icones">
     <i class="fi fi-br-scissors"></i>
     <label>Barbeiro</label>
     </div>
@@ -104,9 +107,10 @@ include('../config/protect.php');
     <div class="icones">
     <i class="fi fi-rr-paint-roller"></i>
     <label>Pintor</label>
-    </div>
- 
-    
+    </div> -->
+</div>
+<div class="text-prof">
+    <label> Profissionais </label>
 </div>
 <div class="card-container">
     <div class="product-card">
