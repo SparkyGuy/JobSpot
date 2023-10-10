@@ -96,7 +96,7 @@ include('../config/protect.php');
     <i class="fi fi-rr-building"></i>
     <label>Porteiro</label>
     </div>
- <!-- <div class="icones">
+<div class="icones">
     <i class="fi fi-br-scissors"></i>
     <label>Barbeiro</label>
     </div>
@@ -107,7 +107,7 @@ include('../config/protect.php');
     <div class="icones">
     <i class="fi fi-rr-paint-roller"></i>
     <label>Pintor</label>
-    </div> -->
+    </div>
 </div>
 <div class="text-prof">
     <label> Profissionais </label>
@@ -241,12 +241,17 @@ include('../config/protect.php');
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     It has survived not only five centuries, but also the leap into electronic typesetting, 
                 </h2>
-                    <h3>Contato</h3>
-                <div class="links">
-                    <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i>
-                    <i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i>
-                    <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
-                </div>
+                <br>
+                <br>
+                <hr>
+                    <div class="links-container">
+                        <h3>Contato</h3>
+                        <div class="links">
+                            <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i>
+                            <i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i>
+                            <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
+                        </div>
+                    </div>
             </div>
             <div class="elemento2">
             </div>

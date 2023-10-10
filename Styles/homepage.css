@@ -48,7 +48,7 @@ nav {
     transition: transform 0.3s;
     display: inline-block; 
     margin-right: 15px;
-    max-width: 32vh;
+    max-width: 30vh;
     background-color: #fff;
     padding: 1em;
     box-shadow: 0 5px 5px #e1e1e1;
@@ -212,6 +212,9 @@ h6{
   border: none;
   cursor: pointer;
 }
+#close-modal:hover{
+  transform: scale(1.2); 
+}
 .invisivel{
   color: #fff;
 }
@@ -238,18 +241,13 @@ h2{
 h3{
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 30vh;
-  margin-top: 15vh;
-
 }
-
 .links {
-  display: grid;
-  row-gap: 50px;
-  margin-top: 5vh;
-  display: flex;
+  display: table-caption;
   align-items: center;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
+
 }
 .inside{
   background-color:red;
@@ -262,6 +260,7 @@ h3{
     font-size: 2rem;
     transition: transform 0.2s;
     cursor: pointer;
+    margin-top: 40px;
 }
 
 .links i:hover {
@@ -281,7 +280,7 @@ display: block;
 }
 
 .outdoor img {
-  width: 213vh;
+  width: 200vh;
   border-radius: 15px;
   height:  60vh;
 }
@@ -296,6 +295,7 @@ display: block;
   justify-content: space-between;
   padding: 6px;
   align-items: center;
+  margin-left: 25px;
 
   
 }
@@ -315,6 +315,7 @@ display: block;
   align-items: center;
   margin-left: 35px;
   transition: transform 0.3s;
+  font-size: medium;
 }
 
 i{
@@ -337,6 +338,8 @@ i{
   font-family: 'Poppins', sans-serif;
   font-weight: bolder;
   color:#544384;
+  font-size: 13px;
+  text-align: center;
 }
 .header{
 	width: 1000px;
@@ -383,7 +386,7 @@ i{
 	padding: 10px 20px;
 	border-radius: 3px;
 	font-size: 18px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .search_wrap .search_box .btn{
@@ -399,6 +402,7 @@ i{
 
 .search_wrap .search_box .btn:hover{
 	background: #708bd2;
+  
 }
 
 .search_wrap .search_box .btn.btn_common .fas{
@@ -414,7 +418,7 @@ i{
 	right: 0;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .search_wrap.search_wrap_1 .search_box .input,
@@ -479,4 +483,27 @@ i{
   font-family: 'Inter Tight', sans-serif;
   font-weight: bold;
   color: #544384;
+}
+
+
+
+/* Estilos padrão para todos os dispositivos */
+
+/* Monitor de 1920x1080 
+@media screen and (min-width: 1600px) {
+  /* Adicione estilos específicos para monitores grandes aqui 
+}
+
+/* Tela de notebook 
+@media screen and (max-width: 1599px) and (min-width: 769px) {
+  /* Adicione estilos específicos para telas de notebook aqui 
+}
+
+/* Celular 
+@media screen and (max-width: 768px) {
+  /* Adicione estilos específicos para celulares aqui 
+} 
+*/
+.links-container{
+text-align: center;
 }
