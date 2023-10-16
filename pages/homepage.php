@@ -224,7 +224,9 @@ include('../config/protect.php');
 <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
       <div class="modal-header">
-        <h2>João Gomes - Pedreiro</h2>
+        <div class="invisivel">
+            <h2>João Gomes - Pedreiro</h2>
+        </div>
         <button id="close-modal">
         <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
         </button>
@@ -254,6 +256,27 @@ include('../config/protect.php');
                     </div>
             </div>
             <div class="elemento2">
+            <div class="carousel">
+                <button class="carousel__prev"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="carousel__container">
+                  <div class="carousel__slide">
+                    <img src="https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_architecturaldigest.png,fl_progressive,g_face,h_1080,q_80,w_1920/v1645135325/architecturaldigest_on-the-market-inside-a-23-dollars-million-mega-mansion-surrounded-by-a-lake.jpg" alt="Imagem 1">
+                  </div>
+                  <div class="carousel__slide">
+                    <img src="https://image.cnbcfm.com/api/v1/image/107258443-1686936319576-49_DJI_0384.jpg?v=1686943829" alt="Imagem 2">
+                  </div>
+                  <div class="carousel__slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4FKCTb3pDeqvuvHF5lCzI3fblxFznnQZw2WTmVZiKDvu4lMTEYX-jnlmkNWO7qagbqPI&usqp=CAU" alt="Imagem 3">
+                  </div>
+                  <div class="carousel__slide">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/LV7rPUXZEENCVU9hFNBKYA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://media.zenfs.com/en/robb_report_967/0b9758bbc869af731f03ce620c7bc5da" alt="Imagem 4">
+                  </div>
+                  <div class="carousel__slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFoqO_oTEB_aL2sOtjyixeWfeZqSB-LNicv5lHdO6ALVam3eJ33tWCbjqkHMksBIEd7ZM&usqp=CAU" alt="Imagem 5">
+                  </div>
+                </div>
+                <button class="carousel__next"><i class="fa-solid fa-angle-left"></i></button>
+            </div>
             </div>
       </div>
     </div>

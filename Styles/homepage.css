@@ -506,3 +506,61 @@ i{
 .links-container{
 text-align: center;
 }
+
+.elemento2{
+  color:red;
+}
+
+.modal-body .cointainer {
+  display: flex;
+}
+
+.modal-body .elemento1,
+.modal-body .elemento2 {
+  flex: 1;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-left: 15vh;
+}
+
+.carousel__prev,
+.carousel__next {
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel__container {
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-top: 16vh;
+  align-items: center;
+  text-align: center;
+}
+.carousel__slide {
+  min-width: 100%;
+}
+
+.carousel__slide img {
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.carousel__prev i{
+  margin-top: 14vh;
+}
+.carousel__next i{
+transform: rotate(180deg);
+margin-top: 14vh;
+}
+
+.invisivel h2{
+  color: #fff;
+}
