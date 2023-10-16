@@ -224,7 +224,7 @@ include('../config/protect.php');
 <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
       <div class="modal-header">
-        <h2 class="invisivel">Este é o Modal</h2>
+        <h2>João Gomes - Pedreiro</h2>
         <button id="close-modal">
         <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
         </button>

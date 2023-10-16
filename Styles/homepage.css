@@ -48,7 +48,7 @@ nav {
     transition: transform 0.3s;
     display: inline-block; 
     margin-right: 15px;
-    max-width: 30vh;
+    max-width: 29.5vh;
     background-color: #fff;
     padding: 1em;
     box-shadow: 0 5px 5px #e1e1e1;
@@ -167,8 +167,8 @@ h6{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 95%;
-  width: 95%;
+  height: 80%;
+  width: 80%;
   background-color: #fff;
   padding: 1.2rem;
   border-radius: 0.5rem;
@@ -185,8 +185,10 @@ h6{
 .modal-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
+  text-align: center;
+}
+.modal-header h2{
+  margin-left: 69vh;
 }
 
 .modal-body h4{
@@ -214,9 +216,6 @@ h6{
 }
 #close-modal:hover{
   transform: scale(1.2); 
-}
-.invisivel{
-  color: #fff;
 }
 .profile-pic-modal img{
   max-width: 42vh;
@@ -280,7 +279,7 @@ display: block;
 }
 
 .outdoor img {
-  width: 200vh;
+  width: 190vh;
   border-radius: 15px;
   height:  60vh;
 }
