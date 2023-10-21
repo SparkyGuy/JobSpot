@@ -4,12 +4,10 @@
             $nome = $_POST['nome'];
             $sobrenome = $_POST['sobrenome'];
             $email = $_POST['email'];
-            $senha = $_POST['senha']; // Criptografa a senha
-        
-            // Inserir os dados no banco de dados
+            $senha = $_POST['senha'];
             $sql = "INSERT INTO clientes (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)";
             $stmt = $mysqli->prepare($sql);
-            
+
             if ($stmt) {
                 $stmt->bind_param("ssss", $nome, $sobrenome, $email, $senha);
                 if ($stmt->execute()) {
@@ -43,7 +41,7 @@
 </head>
 <body>
 <nav>
-        <div class="logo">GabiCode</div>
+        <div class="logo"></div>
         <div class="links">
             <ul class="nav-itens">
                <li><a href="#">Home</a></li>

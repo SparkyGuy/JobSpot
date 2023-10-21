@@ -22,7 +22,9 @@ nav {
     list-style: none;
     display: flex;
 }
-
+.name-icons{
+  font-family: 'PT Sans Narrow', sans-serif;
+}
 .nav-itens>li>a {
     padding-left: 20px;
     color: #202020;
@@ -56,8 +58,12 @@ nav {
     border-radius: 10px;
     border: 1px solid #ccc; 
   }
+  .product-card:hover{
+    cursor: pointer;
+  }
   .product-card img {
-    max-width: 100%;
+    width: 25vh;
+    height: 20vh;
     border-radius: 10px;
   }
   .product-card h4 {
@@ -218,13 +224,14 @@ h6{
   transform: scale(1.2); 
 }
 .profile-pic-modal img{
-  max-width: 42vh;
+  width: 40vh;
   height: 30vh;
   border-radius: 20px;
-  margin-left: 18vh;
+  margin-left: 10vh;
 }
-
-
+.profile-pic-modal h4{
+  font-family: 'Inter', sans-serif;
+}
 .elemento1{
   align-items: center;
   max-width: 40%;
@@ -236,17 +243,19 @@ h2{
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
 }
-
+.links-container h3{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
 h3{
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .links {
-  display: table-caption;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-
+  margin-top: 15px;
 }
 .inside{
   background-color:red;
@@ -259,7 +268,7 @@ h3{
     font-size: 2rem;
     transition: transform 0.2s;
     cursor: pointer;
-    margin-top: 40px;
+    margin: 20px;
 }
 
 .links i:hover {
@@ -288,7 +297,9 @@ display: block;
   margin-top: 2vh;
   margin-left: 20px;
 }
-
+.card-container h4{
+  font-family: 'Raleway', sans-serif;
+}
 .icones-container{
   margin-top:2vh;
   justify-content: space-between;
@@ -479,24 +490,71 @@ i{
   margin-top: 80px;
   text-align: center;
   font-size: 40px;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+
   color: #544384;
 }
+.name-profile h4{
+  font-family: 'Raleway', sans-serif;
+}
+.desc h2{
+
+}
 
 
 
-/* Estilos padrão para todos os dispositivos */
-
-/* Monitor de 1920x1080 
+/* Monitor de 1920x1080 */
 @media screen and (min-width: 1600px) {
-  /* Adicione estilos específicos para monitores grandes aqui 
+ 
 }
 
-/* Tela de notebook 
+/* Tela de notebook */
 @media screen and (max-width: 1599px) and (min-width: 769px) {
-  /* Adicione estilos específicos para telas de notebook aqui 
+  .profile-pic-modal img{
+    width: 40vh;
+    height: 30vh;
+    border-radius: 20px;
+    margin-left: 10vh;
+  }
+  .outdoor img {
+    width: 190vh;
+    border-radius: 15px;
+    margin-left: 9vh;
+    height:  60vh;
+  }
+  .icones{
+    width: 95px;
+    height: 110px;
+    margin-left: 4px;
+  }
+  .icones-container{
+    padding: 6px;
+    margin-left: 20px;
+  }
+  .icones-container i{
+    font-size: 50px;
+  }
+  .profile-pic{
+    text-decoration: none;
+    border: none;
+    background-color: #fff;
+    margin-left: 35vh;
 }
+.product-card {
+  margin-top: 10px;
+  transition: transform 0.3s;
+  display: inline-block; 
+  margin-right: 15px;
+  max-width: 30vh;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 5px 5px #e1e1e1;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  border: 1px solid #ccc; 
+}
+}
+
 
 /* Celular 
 @media screen and (max-width: 768px) {
@@ -514,22 +572,20 @@ text-align: center;
 .modal-body .cointainer {
   display: flex;
 }
-
-.modal-body .elemento1,
-.modal-body .elemento2 {
-  flex: 1;
+.carousel__prev i,
+.carousel__next i{
+  font-size: 5vh;
 }
 .carousel {
   display: flex;
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  margin-left: 15vh;
+  margin-left: 8vh;
 }
 
 .carousel__prev,
 .carousel__next {
-  font-size: 2em;
   background: none;
   border: none;
   cursor: pointer;
@@ -539,7 +595,7 @@ text-align: center;
   display: flex;
   overflow: hidden;
   transition: transform 0.3s ease;
-  margin-top: 16vh;
+  margin-top: 12vh;
   align-items: center;
   text-align: center;
 }
@@ -554,13 +610,35 @@ text-align: center;
 }
 
 .carousel__prev i{
-  margin-top: 14vh;
+  margin-top: 8vh;
 }
 .carousel__next i{
 transform: rotate(180deg);
-margin-top: 14vh;
+margin-top: 8vh;
 }
 
 .invisivel h2{
   color: #fff;
+}
+.carousel__indicators {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10vh;
+}
+
+.carousel__indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #999; /* Cor dos indicadores inativos */
+  border-radius: 50%;
+  margin: 0 5px; /* Espaçamento entre os indicadores */
+  cursor: pointer;
+}
+
+.carousel__indicator.active {
+  background-color: #544384; /* Cor do indicador ativo */
+}
+a{
+  text-decoration: none;
 }

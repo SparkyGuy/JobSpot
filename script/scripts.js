@@ -39,3 +39,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+  $(document).ready(function () {
+    const container = $(".carousel__container");
+    const slides = $(".carousel__slide");
+    const indicators = $(".carousel__indicator");
+    const slideWidth = slides.first().width();
+    let currentIndex = 0;
+  
+    $(".carousel__prev").on("click", function () {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+  
+    $(".carousel__next").on("click", function () {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  
+    function updateCarousel() {
+      container.css("transform", `translateX(-${currentIndex * slideWidth}px`);
+      indicators.removeClass("active");
+      indicators.eq(currentIndex).addClass("active");
+    }
+  });
+  

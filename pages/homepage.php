@@ -12,6 +12,17 @@ include('../config/protect.php');
     <title>Navbar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
@@ -113,7 +124,20 @@ include('../config/protect.php');
     <label> Profissionais </label>
 </div>
 <div class="card-container">
-    <div class="product-card">
+    <div class="product-card" id="open-modal">
+        <img src="../images/rodrigo.jpg" alt="">
+        <h4>Rodrigo </h4>
+        <hr>
+        <br>
+        <h5>Pedreiro</h5>
+            <h6>(16)99119-0088</h6>
+
+        <div>
+            <button id="open-modal">+</button>
+        </div>
+    </div>
+
+    <div class="product-card" id="open-modal">
         <img src="../images/pedreiro.jpg" alt="">
         <h4>João Gomes</h4>
         <hr>
@@ -127,7 +151,7 @@ include('../config/protect.php');
         </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="open-modal">
         <img src="../images/pedreiro.jpg" alt="">
         <h4>João Gomes</h4>
         <hr>
@@ -137,25 +161,11 @@ include('../config/protect.php');
 
         <div>
             <span>$299</span>
-            <button id="open-modal">+</button>
+            <button id="open-modal" >+</button>
         </div>
     </div>
 
-    <div class="product-card">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span>$299</span>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
-
-    <div class="product-card">
+    <div class="product-card" id="open-modal">
         <img src="../images/pedreiro.jpg" alt="">
         <h4>João Gomes</h4>
         <hr>
@@ -169,7 +179,7 @@ include('../config/protect.php');
         </div>    
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="open-modal">
         <img src="../images/pedreiro.jpg" alt="">
         <h4>João Gomes</h4>
         <hr>
@@ -183,7 +193,7 @@ include('../config/protect.php');
         </div>   
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="open-modal">
         <img src="../images/pedreiro.jpg" alt="" >
         <h4>João Gomes</h4>
         <hr>
@@ -235,22 +245,27 @@ include('../config/protect.php');
         <div class="cointainer">
             <div class="elemento1">
                 <div class="profile-pic-modal">
-                    <img src="../images/pedreiro.jpg" alt="">
+                    <img src="../images/rodrigo.jpg" alt="">
                 </div>
-                <h4>João Gomes</h4>
-                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, 
-                </h2>
+                <div class="name-profile">
+                    <h4>Rodrigo Construção</h4>
+                </div>
+                <div class="desc">
+                    <h2>
+                        🏠 Precisando construir ou reformar, Rodrigo Construção!<br>
+                        🤝 Chama quem entende do assunto<br>
+                        📲 16 - 99978 - 4087<br>
+                        📍 São Joaquim da Barra - SP    
+                    </h2>
+                </div>
                 <br>
                 <br>
-                <hr>
+                <br>
                     <div class="links-container">
                         <h3>Contato</h3>
                         <div class="links">
-                            <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i>
-                            <i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i>
+                            <a href="https://api.whatsapp.com/send/?phone=5516999784087"> <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i> </a>
+                            <a href="https://www.instagram.com/rodrigoconstrucao_/"><i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i> </a>
                             <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
                         </div>
                     </div>
@@ -260,22 +275,31 @@ include('../config/protect.php');
                 <button class="carousel__prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="carousel__container">
                   <div class="carousel__slide">
-                    <img src="https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_architecturaldigest.png,fl_progressive,g_face,h_1080,q_80,w_1920/v1645135325/architecturaldigest_on-the-market-inside-a-23-dollars-million-mega-mansion-surrounded-by-a-lake.jpg" alt="Imagem 1">
+                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d1-e0901ddab8ccfc0dd8d1ead154b47259/views/imgo" alt="Imagem 1">
                   </div>
                   <div class="carousel__slide">
-                    <img src="https://image.cnbcfm.com/api/v1/image/107258443-1686936319576-49_DJI_0384.jpg?v=1686943829" alt="Imagem 2">
+                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d2-c46dc02c2d6890f43be254d7a7db405e/views/imgo" alt="Imagem 2">
                   </div>
                   <div class="carousel__slide">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4FKCTb3pDeqvuvHF5lCzI3fblxFznnQZw2WTmVZiKDvu4lMTEYX-jnlmkNWO7qagbqPI&usqp=CAU" alt="Imagem 3">
+                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d4-fede72f9c28236f339d932869fbaa5ef/views/imgpsh_fullsize" alt="Imagem 3">
                   </div>
                   <div class="carousel__slide">
-                    <img src="https://s.yimg.com/ny/api/res/1.2/LV7rPUXZEENCVU9hFNBKYA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://media.zenfs.com/en/robb_report_967/0b9758bbc869af731f03ce620c7bc5da" alt="Imagem 4">
+                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d4-1fc1f2ffc22521b67d2c26a1eec9f050/views/imgo" alt="Imagem 4">
                   </div>
                   <div class="carousel__slide">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFoqO_oTEB_aL2sOtjyixeWfeZqSB-LNicv5lHdO6ALVam3eJ33tWCbjqkHMksBIEd7ZM&usqp=CAU" alt="Imagem 5">
+                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d3-a706e6f9b869b1bd7e8ec01fdc8af697/views/imgo" alt="Imagem 5">
                   </div>
                 </div>
                 <button class="carousel__next"><i class="fa-solid fa-angle-left"></i></button>
+            </div>
+            <div class="indicator-container">
+            <ul class="carousel__indicators">
+                    <li class="carousel__indicator active"></li>
+                    <li class="carousel__indicator"></li>
+                    <li class="carousel__indicator"></li>
+                    <li class="carousel__indicator"></li>
+                    <li class="carousel__indicator"></li>
+                </ul>
             </div>
             </div>
       </div>
