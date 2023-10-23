@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.animation-container{
+    width: auto;
+    height: auto;
+    background-position: center;
+}
+
+.animated{
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background-position: center;
+}
+

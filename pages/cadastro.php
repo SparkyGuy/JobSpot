@@ -89,7 +89,7 @@
                 }
               </script>
               <div class="registrar-botao2">
-                              <button type="submit" id="submit" onClick="window.location.href='login.php'" class="learn-more"> <!-- Link Redirecionado -->
+                              <button type="submit" id="submit" onClick="window.location.href='login.php'" class="learn-more">
                   <span aria-hidden="true" class="circle">
                   <span class="icon arrow"></span>
                   </span>
