@@ -43,11 +43,11 @@
 <nav>
         <div class="logo"></div>
         <div class="links">
-            <ul class="nav-itens">
+            <ul class="nav-itens"> <!--
                <li><a href="#">Home</a></li>
                <li><a href="#">About us</a></li>
                <li><a href="#">Preços</a></li>
-               <li><a href="#">Suporte</a></li>
+               <li><a href="#">Suporte</a></li> -->
             </ul>
         </div>
             <button href="#" onClick="window.location.href='login.php'" class="cadastro" >Login</button>
@@ -57,6 +57,9 @@
 
      <div class="container">
       <div class="componente2">
+        <div class="home-text">
+          <h1>BEM VINDO AO JOBSPOT</h1>
+        </div>
       </div>
       <div class="componente">
           <div class="quadrado2">
@@ -64,7 +67,7 @@
               <div class="texto">
                 <div class="meio">
                 <form action="cadastro.php" method="POST">
-              <label class="text-cadastro">Cadastro</label>
+              <label class="text-cadastro"> Cadastro</label>
               </div>
               <div class="input1">
                 <MdOutlinePerson/>

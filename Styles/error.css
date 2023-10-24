@@ -1,21 +1,44 @@
 *{
-    margin: 0;
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-
-}
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  }
 
 .animation-container{
-    width: auto;
-    height: auto;
     background-position: center;
+    align-items: center;
 }
 
 .animated{
-    align-items: center;
+    margin-top: 8vh;
     width: 600px;
     height: 600px;
-    background-position: center;
 }
+body {
 
+    background-image: url('../images/fundo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .text h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: xx-large;
+    color: #6e5a6f;
+  }
+
+  
+  .button button{
+    width: 150px;
+    height: 50px;
+    text-align: center ;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: #6e5a6f;
+    color: white;
+  }
+  .button button:hover{
+    cursor: pointer;
+  }

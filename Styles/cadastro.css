@@ -1,18 +1,19 @@
 html { overflow-y: hidden; }
-
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+
     }
     .text-cadastro{
       color: #544384;
+      font-family: 'Poppins', sans-serif;
+
     }
     ::placeholder {
-      font-weight: bold;
       font-size: 1em;
       padding: 5px;
+      margin-left: 5px;
       color: black;
     }
     body {
@@ -102,6 +103,16 @@ html { overflow-y: hidden; }
     .input1{
       justify-content: space-between;
       text-decoration: none;
+    }
+
+
+    .home-text h1{
+      margin-top: 15vh;
+      font-size: 80px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: lighter;
+      color:#544384
+
     }
     button {
       position: relative;
