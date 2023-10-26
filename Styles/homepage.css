@@ -5,11 +5,14 @@
 }
 
 nav {
+
+    height: 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-family: 'Poppins', sans-serif;
     align-items: center;
     background-color: rgb(245, 245, 245);
+
 }
 
 .logo {
@@ -409,10 +412,8 @@ i{
 	z-index: 1;
 	cursor: pointer;
 }
-
 .search_wrap .search_box .btn:hover{
-	background: #708bd2;
-  
+  background: #544384;
 }
 
 .search_wrap .search_box .btn.btn_common .fas{
@@ -497,9 +498,7 @@ i{
 .name-profile h4{
   font-family: 'Raleway', sans-serif;
 }
-.desc h2{
 
-}
 .desc{
   background-color: rgb(245, 245, 245);
   padding: 20px;
@@ -557,23 +556,23 @@ i{
     margin-left: 10vh;
   }
   .outdoor img {
-    width: 190vh;
+    width: 196vh;
     border-radius: 15px;
-    margin-left: 9vh;
+    margin-left: 4vh;
     height:  60vh;
   }
   .icones{
-    width: 95px;
-    height: 110px;
-    padding: 4px;
+    width: 80px;
+    height: 100px;
+    margin-left: 20px;
   
   }
   .icones-container{
-    padding: 6px;
+    padding: 4px;
     margin-left: 20px;
   }
   .icones-container i{
-    font-size: 50px;
+    font-size: 40px;
   }
   .profile-pic{
     text-decoration: none;

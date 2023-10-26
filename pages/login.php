@@ -41,29 +41,25 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 </head>
 <body>
 <nav>
-        <div class="logo">GabiCode</div>
-        <div class="links">
-            <ul class="nav-itens">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About us</a></li>
-               <li><a href="#">Preços</a></li>
-               <li><a href="#">Suporte</a></li>
-            </ul>
-        </div>
-        <div class="btn">
-
+  
+       <!--  <div class="btn">
             <button href="#" onClick="window.location.href='cadastro.php'" class="cadastro">Cadastro</button>
-        </div>
+        </div> -->
     </nav>
     <div class="container">
         <div class="componente2">
+            <div class="home-text">
+              <h1>BEM VINDO AO JOBSPOT</h1>
+            </div>
+            <div class="subtext"> 
+              <h1>Encontrar profissionais locais nunca foi tão fácil!</h1>
+            </div>
           <div class="image-login">
             
           </div>
         </div>
         <div class="componente">
             <div class="quadrado">
-  
                 <div class="texto">
                   <div class="meio">
                     <form action="" method="POST">
@@ -90,6 +86,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                             <span aria-hidden="true" class="circle">
                             <span class="icon arrow"></span>
                             </span>
+                            
                             <span class="button-text">Login</span>
                           </button>
                     </form>
@@ -97,11 +94,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             </div>
           </div>
         </div>
-
-
-
 </body>
-
-
 </html>
 

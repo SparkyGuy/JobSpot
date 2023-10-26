@@ -65,4 +65,12 @@ document.addEventListener("DOMContentLoaded", function() {
       indicators.eq(currentIndex).addClass("active");
     }
   });
-  
+  const searchButton = document.getElementById('searchButton');
+const searchInput = document.getElementById('searchInput');
+
+searchButton.addEventListener('click', () => {
+    const termoDePesquisa = searchInput.value.trim();
+    if (termoDePesquisa) {
+        window.location.href = `search.php?search=${termoDePesquisa}`;
+    }
+});

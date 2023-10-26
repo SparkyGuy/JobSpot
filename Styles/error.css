@@ -42,3 +42,21 @@ body {
   .button button:hover{
     cursor: pointer;
   }
+  @media screen and (max-width: 1599px) and (min-width: 769px) {
+    
+.animated{
+  margin-top: 4vh;
+  width: 400px;
+  height: 400px;
+}
+.text h2{
+
+  font-size: x-large;
+  color: #6e5a6f;
+}
+.button button{
+  width: 100px;
+  height: 40px;
+}
+
+  }

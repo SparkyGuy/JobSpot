@@ -1,7 +1,36 @@
 <?php
 include('../config/protect.php');
-?>
+include('../config/conexao.php');
 
+
+if (isset($_GET['search'])) {
+    $termoDePesquisa = $_GET['search'];
+
+    // Conecte-se ao seu banco de dados (modifique estas credenciais)
+    $dbHost = 'localhost';
+    $dbUser = 'root';
+    $dbPassword = '';
+    $dbName = 'clientes';
+
+    $conn = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
+
+    $query = "SELECT * FROM clientes WHERE nome-trabalho LIKE '%$termoDePesquisa%' OR profissao LIKE '%$termoDePesquisa%'";
+    $result = $conn->query($query);
+
+    // Processar e exibir os resultados da pesquisa
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<p>Nome: " . $row['nome-trabalho'] . "</p>";
+            echo "<p>Profissão: " . $row['profissao'] . "</p>";
+            echo "<hr>";
+        }
+    } else {
+        echo "Nenhum resultado encontrado.";
+    }
+
+    $conn->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -44,8 +73,8 @@ include('../config/protect.php');
         <div class="search-container">
 		<div class="search_wrap search_wrap_1">
 			<div class="search_box">
-				<input type="text" class="input" placeholder="search...">
-				<div class="btn btn_common">
+				<input type="text" id="searchInput" class="input" placeholder="Pesquisar...">
+				<div class="btn btn_common"  id="searchButton">
 					<i class="fas fa-search"></i>
 				</div>
 			</div>

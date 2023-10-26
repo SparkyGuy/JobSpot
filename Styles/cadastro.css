@@ -105,8 +105,6 @@ html { overflow-y: hidden; }
       justify-content: space-between;
       text-decoration: none;
     }
-
-
     .home-text h1{
       margin-top: 8vh;
       font-size: 80px;
@@ -340,4 +338,38 @@ nav {
 .cadastro:hover {
     background-color: #3d3d3d;
     transition: 1s background;
+}
+.button-text2{
+  font-family: 'Poppins', sans-serif;
+}
+@media screen and (max-width: 1599px) and (min-width: 769px) {
+  .home-text h1{
+    margin-top: 10vh;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 150;
+    color:#544384;
+  }
+  .subtext h1{
+    font-size: 40px;
+    font-weight: lighter;
+    margin-left: 6px;
+  }
+  .home-icon img{
+    width: 250px;
+    height: 250px;  
+  }
+  .container{
+    display: flex;
+    margin-top: 60px;
+    }
+  .login-btn button{
+    color: white;
+    border: #6e5a6f;
+    border-radius: 15px;
+    margin-left: 100px;
+    padding: 10px 10px;
+    background-color: #6e5a6f;
+  }
+   
 }
