@@ -40,27 +40,22 @@
     <title>Cadastrar-se</title>
 </head>
 <body>
-<nav>
-        <div class="logo"></div>
-        <div class="links">
-            <ul class="nav-itens"> <!--
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About us</a></li>
-               <li><a href="#">Preços</a></li>
-               <li><a href="#">Suporte</a></li> -->
-            </ul>
-        </div>
-            <button href="#" onClick="window.location.href='login.php'" class="cadastro" >Login</button>
-        </div>
-
-    </nav>
-
+  
      <div class="container">
       <div class="componente2">
-        <div class="home-text">
-          <h1>BEM VINDO AO JOBSPOT</h1>
+        <div class="text-container">
+          <div class="home-text">
+            <h1>BEM VINDO AO JOBSPOT</h1>
+          </div>
+          <div class="subtext"> 
+            <h1>Encontrar profissionais locais nunca foi tão fácil!</h1>
+          </div>
         </div>
+      <div class="home-icon">
+        <img src="../images/home-icon.png" alt="">
       </div>
+
+        </div>
       <div class="componente">
           <div class="quadrado2">
 
@@ -92,6 +87,9 @@
                 }
               </script>
               <div class="registrar-botao2">
+                              <div class="login-btn">
+                                  <button href="#" onClick="window.location.href='login.php'" >Fazer Login</button>
+                              </div>
                               <button type="submit" id="submit" onClick="window.location.href='login.php'" class="learn-more">
                   <span aria-hidden="true" class="circle">
                   <span class="icon arrow"></span>
