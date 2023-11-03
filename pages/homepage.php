@@ -6,7 +6,7 @@ include('../config/conexao.php');
 if (isset($_GET['search'])) {
     $termoDePesquisa = $_GET['search'];
 
-    // Conecte-se ao seu banco de dados (modifique estas credenciais)
+
     $dbHost = 'localhost';
     $dbUser = 'root';
     $dbPassword = '';
@@ -34,6 +34,7 @@ if (isset($_GET['search'])) {
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    
     <script src="https://kit.fontawesome.com/dacd2c67db.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,11 +74,12 @@ if (isset($_GET['search'])) {
         <div class="search-container">
 		<div class="search_wrap search_wrap_1">
 			<div class="search_box">
-				<input type="text" id="searchInput" class="input" placeholder="Pesquisar...">
-				<div class="btn btn_common"  id="searchButton">
-					<i class="fas fa-search"></i>
+            <form action="resultados.php" method="GET">
+				<input type="text" name="search" class="input" placeholder="Pesquisar por Profissão">
+                <button class="btn btn_common" id="searchButton" type="submit"><i class="fas fa-search"></i></button>
 				</div>
-			</div>
+			    </div>
+            </form>
 		</div>
         </div>
         <div class="btn">

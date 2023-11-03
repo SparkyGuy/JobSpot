@@ -14,7 +14,9 @@ nav {
     background-color: rgb(245, 245, 245);
 
 }
-
+.search_wrap .search_box .input {
+  border: 0;
+}
 .logo {
     margin-top: 1vh;
     width: 20vh;
@@ -369,14 +371,19 @@ i{
 	font-weight: 700;
 	color: #fff;
 }
-
+.search-container
 .container .input{
 	border: 0;
 	outline: none;
-
   border-radius: 20px;
 }
-
+.btn button{
+  border: none;
+}
+.search-container input{
+  text-decoration: none;
+  border: none;
+}
 .search_wrap{
 	width: 500px;
 	margin: 38px auto;
@@ -401,7 +408,9 @@ i{
 	font-size: 18px;
   border-radius: 10px;
 }
-
+input{
+  border: none;
+}
 .search_wrap .search_box .btn{
 	position: absolute;
 	top: 0;
@@ -424,7 +433,9 @@ i{
 	color: #fff;
 	font-size: 20px;
 }
-
+.search-container button{
+  border: none;
+}
 .search_wrap.search_wrap_1 .search_box .btn{
 	right: 0;
 	border-top-right-radius: 3px;
@@ -679,4 +690,7 @@ margin-top: 8vh;
 }
 a{
   text-decoration: none;
+}
+.search-container button:hover{
+  transition: transform 0.3s;
 }
