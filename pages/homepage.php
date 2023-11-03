@@ -103,52 +103,76 @@ if (isset($_GET['search'])) {
 </div>
 <div class="icones-container">
     <div class="icones">
-            <i class="fi fi-rr-car-mechanic"></i>
-            <label>Mecânico</label>
+    <a href="resultados.php?search=mecanico">
+        <i class="fi fi-rr-car-mechanic"></i>
+        <label>Mecânico</label>
+        </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=chaveiro">
             <i class="fi fi-rr-key"></i>
             <label>Chaveiro</label>
+    </a>  
     </div>
     <div class="icones">
+    <a href="resultados.php?search=entregador">
         <i class="fi fi-rs-truck-side"></i>
         <label>Entregador</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=faxineiro">
     <i class="fi fi-rr-broom"></i>
     <label>Faxineiro</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=baba">
     <i class="fi fi-rr-child-head"></i>
     <label>Babá</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=personal">
     <i class="fi fi-rr-gym"></i>
     <label>Personal</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=pedreiro">
     <i class="fi fi-rr-block-brick"></i>
     <label>Pedreiro</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=jardineiro"> 
     <i class="fi fi-rs-flower-tulip" ></i>
     <label>Jardineiro</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=porteiro">
     <i class="fi fi-rr-building"></i>
     <label>Porteiro</label>
+    </a>
     </div>
 <div class="icones">
+<a href="resultados.php?search=barbeiro"> 
     <i class="fi fi-br-scissors"></i>
     <label>Barbeiro</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=esteticista"> 
     <i class="fi fi-rr-soap"></i>
     <label>Esteticista</label>
+    </a>
     </div>
     <div class="icones">
+    <a href="resultados.php?search=pintor">
     <i class="fi fi-rr-paint-roller"></i>
     <label>Pintor</label>
+    </a>
     </div>
 </div>
 <div class="text-prof">
