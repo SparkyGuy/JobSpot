@@ -39,17 +39,12 @@ if (isset($_GET['search'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>Encontrar Profissionais nunca foi tão Fácil!</title>
+    <link rel="icon" type="image/x-icon" href="..//images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&family=Raleway:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
@@ -69,7 +64,9 @@ if (isset($_GET['search'])) {
 <body>
     <nav>
         <div >
-            <img src="../images/logo.png" class="logo">
+            <div class="logo">
+                <h1>JobSpot</h1>
+            </div>
         </div>
         <div class="search-container">
 		<div class="search_wrap search_wrap_1">
@@ -82,11 +79,11 @@ if (isset($_GET['search'])) {
             </form>
 		</div>
         </div>
-        <div class="btn">
+        <div class="nav-items-container">
             <button href="#" class="plus-button">
             <div id="tooltip-plus" class="hidden">
-    <span id="tooltipTextPlus">Adicionar Profissão</span>
-</div>
+                <span id="tooltipTextPlus">Adicionar Profissão</span>
+            </div>
             <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px;"></i>
             </button>
             <button href="#" class="profile-pic">
@@ -99,7 +96,7 @@ if (isset($_GET['search'])) {
     </nav>
 <div class="container">
     <div class="outdoor">
-        <img src="../images/image-teste.jpg">
+    <img src="https://media.discordapp.net/attachments/639091185423482882/1174232181149814794/zoeira_5.png?ex=6566d7f0&is=655462f0&hm=851578dde1450f095366bf45d2ae21e219c8e3f356bb103765879ba23e7a24eb&=&width=776&height=323">
 </div>
 <div class="icones-container">
     <div class="icones">

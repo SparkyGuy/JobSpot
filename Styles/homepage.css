@@ -5,13 +5,14 @@
 }
 
 nav {
-
     height: 60px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-family: 'Poppins', sans-serif;
     align-items: center;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(236, 233, 233);
+
+
 
 }
 
@@ -50,9 +51,15 @@ nav {
   border: 0;
 }
 .logo {
-    margin-top: 1vh;
-    width: 20vh;
-    height: 5vh;
+  margin-top: 1vh;
+  font-weight: lighter;
+  font-size: larger;
+  color:#544384;
+  font-family: 'Comfortaa', sans-serif;
+}
+.logo:hover{
+  cursor: pointer;
+  
 }
 
 .nav-itens {
@@ -69,10 +76,12 @@ nav {
 }
 
 .plus-button{
+  margin: 0;
+  padding: 0;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: rgb(236, 233, 233);
 }
 
 
@@ -143,7 +152,6 @@ nav {
 
 
   }
-
   .product-card:hover button {
     color: #fff;
     cursor: pointer;
@@ -174,7 +182,7 @@ h6{
 
 #tooltipText {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 12px;
 
 }
 #tooltip-plus{
@@ -349,7 +357,7 @@ display: block;
 
 .icones{
   align-items: center;
-  background-color: #f5f6f7;
+  background-color: rgb(236, 233, 233);
   width: 100px;
   height: 120px;
   border-radius: 15px;
@@ -382,10 +390,11 @@ i{
 }
 
 .icones label{
+
   font-family: 'Poppins', sans-serif;
-  font-weight: bolder;
+  font-weight: lighter;
   color:#544384;
-  font-size: 13px;
+  font-size: 11px;
   text-align: center;
 }
 .header{
@@ -409,22 +418,30 @@ i{
 	outline: none;
   border-radius: 20px;
 }
-.btn button{
-  border: none;
+
+
+.nav-items-container{
+  display: flex;
+
 }
 .search-container input{
   text-decoration: none;
   border: none;
 }
+#tooltipTextPlus{
+  font-size: 12px;
+}
 .search_wrap{
-	width: 500px;
+  display: flex;
+	width: 650px;
 	margin: 38px auto;
   border-radius: 20px;
 }
 
 .search_wrap .search_box{
+  display: flex;
 	position: relative;
-	width: 500px;
+	width: 650px;
 	height: 35px;
   border-radius: 15px;
 }
@@ -456,7 +473,9 @@ input{
 .search_wrap .search_box .btn:hover{
   background: #544384;
 }
-
+.fa-user{
+  background-color: rgb(236, 233, 233);
+}
 .search_wrap .search_box .btn.btn_common .fas{
 	position: absolute;
 	top: 50%;
