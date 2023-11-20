@@ -1,8 +1,8 @@
 const openModalButton = document.querySelector("#open-modal");
+
 const closeModalButton = document.querySelector("#close-modal");
 const modal = document.querySelector("#modal");
 const fade = document.querySelector("#fade");
-
 const toggleModal = () => {
   modal.classList.toggle("hide");
   fade.classList.toggle("hide");
@@ -66,19 +66,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-function validateForm() {
-  var nomeInput = document.getElementById("nome").value;
-  var sobrenomeInput = document.getElementById("sobrenome").value;
-  var emailInput = document.getElementById("email").value;
-  var senhaInput = document.getElementById("senha").value;
-  var homeText = document.querySelector(".home-text");
-  if (nomeInput === "" || sobrenomeInput === "" || emailInput === "" || senhaInput === "") {
-      homeText.innerHTML = "Inválido";
-      return false; // Impede o envio do formulário
-  }
-
-  // Outras verificações de validação podem ser feitas aqui
-
-  // Se tudo estiver válido, o formulário será enviado
-  return true;
-}

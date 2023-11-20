@@ -1,0 +1,61 @@
+<div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <div class="invisivel">
+                <h2 id="modal-title">Informações do Profissional</h2>
+            </div>
+            <button class="close-modal-button">
+                <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="elemento1" id="modal-content">
+                    <!-- Conteúdo dinâmico do modal será inserido aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const nome = button.parentElement.parentElement.getAttribute('data-nome');
+                    const profissao = button.parentElement.parentElement.getAttribute('data-profissao');
+                    const telefone = button.parentElement.parentElement.getAttribute('data-telefone');
+
+                    modalTitle.innerText = `${nome} - ${profissao}`;
+                    modalContent.innerHTML = `
+                        <div class="profile-pic-modal">
+                            <img src="../images/rodrigo.jpg" alt="">
+                        </div>
+                        <div class="name-profile">
+                            <h4>${nome}</h4>
+                        </div>
+                        <div class="desc">
+                            <h2>
+                                Profissão: ${profissao}<br>
+                                Telefone: ${telefone}
+                            </h2>
+                        </div>
+                    `;
+
+                    modal.classList.remove('hide');
+                });
+            });
+
+            const closeModalButton = document.querySelector('.close-modal-button');
+            closeModalButton.addEventListener('click', () => {
+                modal.classList.add('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>

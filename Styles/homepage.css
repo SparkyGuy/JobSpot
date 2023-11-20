@@ -617,6 +617,36 @@ input{
     border-radius: 20px;
     margin-left: 10vh;
   }
+
+  .close-modal-btn button{
+    text-decoration: none;
+    border: none;
+    border: none;
+    background: none;
+  }
+  .close-modal-button i:hover {
+    transition: transform 0.3s ease;
+  }
+
+  .close-modal-btn button:hover {
+    cursor: pointer;
+  }
+  .profile-pic-modal img {
+    width: 35vh;
+    height: 25vh;
+  }
+  .carousel{
+    margin-left: 100px;
+  }
+  .links-container{
+    margin-top: 40px;
+  }
+  .desc h2{
+    font-size: 9px;
+  }
+  .name-profile h4{
+    font-size: 20px;
+  }
   .outdoor img {
     width: 196vh;
     border-radius: 15px;

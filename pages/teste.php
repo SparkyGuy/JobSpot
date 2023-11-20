@@ -17,10 +17,24 @@ if (isset($_GET['search'])) {
     $query = "SELECT * FROM clientes WHERE nome-trabalho LIKE '%$termoDePesquisa%' OR profissao LIKE '%$termoDePesquisa%'";
     $result = $conn->query($query);
 
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $dadosExemplo[] = [
+                'nome' => $row['nome_trabalho'],
+                'profissao' => $row['profissao'],
+                'telefone' => $row['telefone'],
+                // Adicione mais campos conforme necessário
+            ];
+        }
+    } else {
+        echo "Nenhum resultado encontrado.";
+    }
+
     // Processar e exibir os resultados da pesquisa
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<p>Nome: " . $row['nome'] . "</p>";
+            echo "<p>Nome: " . $row['nome-trabalho'] . "</p>";
             echo "<p>Profissão: " . $row['profissao'] . "</p>";
             echo "<hr>";
         }
@@ -175,181 +189,100 @@ if (isset($_GET['search'])) {
 <div class="text-prof">
     <label> Profissionais </label>
 </div>
-<div class="card-container">
-    <div class="product-card" id="open-modal">
-        <img src="../images/rodrigo.jpg" alt="">
-        <h4>Rodrigo </h4>
-        <hr>
+<?php
+
+    $search = "";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "clientes";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+    }
+
+    $resultados_por_pagina = 6;
+    $pagina_atual = isset($_GET["page"]) ? $_GET["page"] : 1;
+    $offset = ($pagina_atual - 1) * $resultados_por_pagina;
+
+    $sql = "SELECT * FROM clientes";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    ?>
         <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal" >+</button>
-        </div>
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>    
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>   
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="" >
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
-</div>
-<script>
-    const profilePicButton = document.querySelector('.profile-pic');
-    const tooltip = document.getElementById('tooltip');
-
-    profilePicButton.addEventListener('mouseover', () => {
-        tooltip.style.display = 'block';
-    });
-
-    profilePicButton.addEventListener('mouseout', () => {
-        tooltip.style.display = 'none';
-    });
-
-    const plusButton = document.querySelector('.plus-button');
-    const tooltipPlus = document.getElementById('tooltip-plus');
-
-    plusButton.addEventListener('mouseover', () => {
-        tooltipPlus.style.display = 'block';
-    });
-
-    plusButton.addEventListener('mouseout', () => {
-        tooltipPlus.style.display = 'none';
-    });
-</script>
-
-<div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
-      <div class="modal-header">
-        <div class="invisivel">
-            <h2>João Gomes - Pedreiro</h2>
-        </div>
-        <button id="close-modal">
-        <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="cointainer">
-            <div class="elemento1">
-                <div class="profile-pic-modal">
-                    <img src="../images/rodrigo.jpg" alt="">
-                </div>
-                <div class="name-profile">
-                    <h4>Rodrigo Construção</h4>
-                </div>
-                <div class="desc">
-                    <h2>
-                        🏠 Precisando construir ou reformar, Rodrigo Construção!<br>
-                        🤝 Chama quem entende do assunto<br>
-                        📲 16 - 99978 - 4087<br>
-                        📍 São Joaquim da Barra - SP    
-                    </h2>
-                </div>
-                    <div class="links-container">
-                        <h3>Contato</h3>
-                        <div class="links">
-                            <a href="https://api.whatsapp.com/send/?phone=5516999784087"> <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i> </a>
-                            <a href="https://www.instagram.com/rodrigoconstrucao_/"><i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i> </a>
-                            <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
-                        </div>
+        <div class="product-card-container">
+        <?php
+        while ($row = $result->fetch_assoc()) {
+        ?>
+                <div class="product-card" id="open-modal" >
+                    <img src="../images/pedreiro.jpg" alt="">
+                    <h4><?php echo $row["nome"]; ?></h4>
+                    <hr>
+                    <br>
+                    <h5><?php echo $row["profissao"]; ?></h5>
+                    <!--  <h6><?php echo $row["telefone"]; ?></h6> -->
+                    <div>
+                        <button class="open-modal-button">+</button>
                     </div>
             </div>
-            <div class="elemento2">
-            <div class="carousel">
-                <button class="carousel__prev"><i class="fa-solid fa-angle-left"></i></button>
-                <div class="carousel__container">
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d1-e0901ddab8ccfc0dd8d1ead154b47259/views/imgo" alt="Imagem 1">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d2-c46dc02c2d6890f43be254d7a7db405e/views/imgo" alt="Imagem 2">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d4-fede72f9c28236f339d932869fbaa5ef/views/imgpsh_fullsize" alt="Imagem 3">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d4-1fc1f2ffc22521b67d2c26a1eec9f050/views/imgo" alt="Imagem 4">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d3-a706e6f9b869b1bd7e8ec01fdc8af697/views/imgo" alt="Imagem 5">
-                  </div>
+        <?php
+        }
+    } else {
+        echo "Nenhum resultado encontrado para a profissão: " . $search;
+    }
+
+    $conn->close();
+
+
+?>
+<div id="fade"class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <div class="invisivel">
+            </div>
+            <div class="close-modal-btn">
+                <button class="close-modal-button">
+                    <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="text">Hello</div>
+            <div class="container">
+                <div class="elemento1" id="modal-content">
+                    <!-- Conteúdo dinâmico do modal será inserido aqui -->
                 </div>
-                <button class="carousel__next"><i class="fa-solid fa-angle-left"></i></button>
             </div>
-            <div class="indicator-container">
-            <ul class="carousel__indicators">
-                    <li class="carousel__indicator active"></li>
-                    <li class="carousel__indicator"></li>
-                    <li class="carousel__indicator"></li>
-                    <li class="carousel__indicator"></li>
-                    <li class="carousel__indicator"></li>
-                </ul>
-            </div>
-            </div>
-      </div>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const fade = document.getElementById('fade');
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const nome = button.parentElement.parentElement.getAttribute('data-nome');
+                    const profissao = button.parentElement.parentElement.getAttribute('data-profissao');
+                    const telefone = button.parentElement.parentElement.getAttribute('data-telefone');
+
+                    modal.classList.remove('hide');
+                    fade.classList.remove('hide');
+                });
+            });
+
+            const closeModalButton = document.querySelector('.close-modal-button');
+            closeModalButton.addEventListener('click', () => {
+                modal.classList.add('hide');
+                fade.classList.add('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>
