@@ -5,8 +5,6 @@ include('../config/conexao.php');
 
 if (isset($_GET['search'])) {
     $termoDePesquisa = $_GET['search'];
-
-
     $dbHost = 'localhost';
     $dbUser = 'root';
     $dbPassword = '';
@@ -17,24 +15,10 @@ if (isset($_GET['search'])) {
     $query = "SELECT * FROM clientes WHERE nome-trabalho LIKE '%$termoDePesquisa%' OR profissao LIKE '%$termoDePesquisa%'";
     $result = $conn->query($query);
 
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $dadosExemplo[] = [
-                'nome' => $row['nome_trabalho'],
-                'profissao' => $row['profissao'],
-                'telefone' => $row['telefone'],
-                // Adicione mais campos conforme necessário
-            ];
-        }
-    } else {
-        echo "Nenhum resultado encontrado.";
-    }
-
     // Processar e exibir os resultados da pesquisa
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<p>Nome: " . $row['nome-trabalho'] . "</p>";
+            echo "<p>Nome: " . $row['nome'] . "</p>";
             echo "<p>Profissão: " . $row['profissao'] . "</p>";
             echo "<hr>";
         }
@@ -202,28 +186,27 @@ if (isset($_GET['search'])) {
         die("Erro na conexão com o banco de dados: " . $conn->connect_error);
     }
 
-    $resultados_por_pagina = 6;
-    $pagina_atual = isset($_GET["page"]) ? $_GET["page"] : 1;
-    $offset = ($pagina_atual - 1) * $resultados_por_pagina;
 
-    $sql = "SELECT * FROM clientes";
+    $sql = "SELECT * FROM clientes ORDER BY id ASC LIMIT 6 ";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
     ?>
         <br>
-        <div class="product-card-container">
+        <div class="product-card-container" data-nome="<?php echo $row["nome"]; ?>" data-profissao="<?php echo $row["profissao"]; ?>" data-telefone="<?php echo $row["telefone"]; ?>">
         <?php
         while ($row = $result->fetch_assoc()) {
+
         ?>
-                <div class="product-card" id="open-modal" >
+
+    
+                <div class="product-card" id="open-modal"  data-id="<?php echo $row['id']; ?>">
                     <img src="../images/pedreiro.jpg" alt="">
                     <h4><?php echo $row["nome"]; ?></h4>
                     <hr>
                     <br>
-                    <h5><?php echo $row["profissao"]; ?></h5>
-                    <!--  <h6><?php echo $row["telefone"]; ?></h6> -->
+                    <h5><?php echo $row["profissao"]?></h5>
                     <div>
-                        <button class="open-modal-button">+</button>
+                        <button class="open-modal-button" onclick="openModal(this)">+</button>
                     </div>
             </div>
         <?php
@@ -248,10 +231,29 @@ if (isset($_GET['search'])) {
             </div>
         </div>
         <div class="modal-body">
-            <div class="text">Hello</div>
+            <div class="text"></div>
             <div class="container">
                 <div class="elemento1" id="modal-content">
-                    <!-- Conteúdo dinâmico do modal será inserido aqui -->
+                    
+                <?php 
+    
+    $search = "";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "clientes";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT id, nome, profissao FROM clientes ORDER BY id ASC";
+    $result = $conn->query($sql);
+ 
+
+    ?>
+                   </div>
                 </div>
             </div>
         </div>
@@ -259,27 +261,35 @@ if (isset($_GET['search'])) {
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const openModalButtons = document.querySelectorAll('.product-card');
             const modal = document.getElementById('modal');
             const modalTitle = document.getElementById('modal-title');
             const modalContent = document.getElementById('modal-content');
             const fade = document.getElementById('fade');
-
+            
             openModalButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    const nome = button.parentElement.parentElement.getAttribute('data-nome');
-                    const profissao = button.parentElement.parentElement.getAttribute('data-profissao');
-                    const telefone = button.parentElement.parentElement.getAttribute('data-telefone');
-
                     modal.classList.remove('hide');
                     fade.classList.remove('hide');
                 });
             });
-
             const closeModalButton = document.querySelector('.close-modal-button');
             closeModalButton.addEventListener('click', () => {
                 modal.classList.add('hide');
                 fade.classList.add('hide');
+
+
+                const clienteId = button.parentElement.parentElement.getAttribute('data-id');
+                const nome = "Nome do Cliente"; 
+                const profissao = "Profissão do Cliente";
+                const telefone = "Telefone do Cliente";
+
+                modal.classList.remove('hide');
+                fade.classList.remove('hide');
+                modalContent.innerHTML = '';
+
+                
+
             });
         });
     </script>

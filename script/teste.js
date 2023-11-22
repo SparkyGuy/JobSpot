@@ -1,8 +1,6 @@
-// Obtém uma referência para o modal e o botão de fechar
 var modal = document.getElementById('myModal');
 var closeModal = document.getElementById('closeModal');
 
-// Obtém uma referência para os cards
 var cards = document.querySelectorAll('.product-card');
 
 // Adiciona um evento de clique para cada card
