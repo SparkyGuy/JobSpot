@@ -212,7 +212,9 @@ if (isset($_GET['search'])) {
         <?php
         }
     } else {
-        echo "Nenhum resultado encontrado para a profissão: " . $search;
+        ?>
+         <h5 class="no-result">"Nenhum resultado encontrado para a profissão: <?php. $search;?> </h5>
+        <?php
     }
 
     $conn->close();

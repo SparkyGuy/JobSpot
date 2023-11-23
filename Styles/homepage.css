@@ -15,7 +15,9 @@ nav {
 
 
 }
-
+body{
+  background-color: #fcfcfc;
+}
 .pagination{
   padding-top: 30px;
   font-size: 20px;
@@ -51,11 +53,16 @@ nav {
   border: 0;
 }
 .logo {
-  margin-top: 1vh;
+    margin-top: 1vh;
+    font-weight: lighter;
+    font-size: larger;
+    color: #544384;
+    font-family: 'Comfortaa', sans-serif;
+}
+.logo h1{
   font-weight: lighter;
   font-size: larger;
   color:#544384;
-  font-family: 'Comfortaa', sans-serif;
 }
 .logo:hover{
   cursor: pointer;

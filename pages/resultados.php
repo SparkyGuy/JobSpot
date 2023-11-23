@@ -102,9 +102,9 @@ include('../config/conexao.php');
 
         if ($result->num_rows > 0) {
         ?>
-            <div class="resultado-text">
+
                 <h5>Exibindo resultados para <?php echo $search; ?></h5>
-            </div>
+             
             <br>
             <div class="product-card-container">
             <?php
@@ -125,7 +125,14 @@ include('../config/conexao.php');
             <?php
             }
         } else {
-            echo "Nenhum resultado encontrado para a profissão: " . $search;
+            ?>
+            <div class="no-result-container">
+                    <h1 class="no-result">Nenhum resultado encontrado para a profissão: <?php echo $search;?></h1>
+                    <div class="no-result-image">
+                        <img src="https://media.discordapp.net/attachments/1154149439812939940/1177300191045505044/Questions.gif?ex=6572013e&is=655f8c3e&hm=326f6255ba5617da9af55e7e4fbc79e05a42405fd373f609d8ae161383c12318&=">
+                    </div>
+                </div>
+        <?php
         }
 
         $conn->close();

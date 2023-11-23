@@ -3,8 +3,11 @@
     margin: 0;
     align-items: center;
     box-sizing: border-box;
-}
 
+}
+body{
+  background-color: #fcfcfc;
+}
 nav {
 
     height: 60px;
@@ -757,4 +760,17 @@ a{
     right: 10px;
     font-size: 24px;
     cursor: pointer;
+}
+
+
+.no-result-container{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+  text-align: center;
+  color:#544384;
+}
+
+.no-result-image img{
+  margin-top: 100px;
+
 }
