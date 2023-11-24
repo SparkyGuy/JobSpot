@@ -782,3 +782,31 @@ a{
 .search-container button:hover{
   transition: transform 0.3s;
 }
+
+.detalhes-container{
+  padding: 30px;
+  width: 50%;
+}
+
+.detalhes-elemento{
+
+}
+.foto-perfil{
+  text-align: center;
+}
+
+
+.foto-perfil img {
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.nome-sobrenome h1{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+  color:#544384;
+}

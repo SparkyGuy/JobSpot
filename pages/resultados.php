@@ -111,7 +111,7 @@ include('../config/conexao.php');
             while ($row = $result->fetch_assoc()) {
             ?>
                     <div class="product-card" id="open-modal" >
-                        <img src="../images/pedreiro.jpg" alt="">
+                        <img src="<?php echo $row['foto-perfil']; ?>" alt="">
                         <h4><?php echo $row["nome"]; ?></h4>
                         <hr>
                         <br>

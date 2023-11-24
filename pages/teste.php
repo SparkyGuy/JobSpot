@@ -200,7 +200,8 @@ if (isset($_GET['search'])) {
 
     
                 <div class="product-card" id="open-modal"  data-id="<?php echo $row['id']; ?>">
-                    <img src="../images/pedreiro.jpg" alt="">
+                <a href="detalhes_profissional.php?id=<?php echo $row['id']; ?>">
+                    <img src="<?php echo $row['foto-perfil']; ?>" alt="">
                     <h4><?php echo $row["nome"]; ?></h4>
                     <hr>
                     <br>
@@ -208,6 +209,7 @@ if (isset($_GET['search'])) {
                     <div>
                         <button class="open-modal-button" onclick="openModal(this)">+</button>
                     </div>
+                </a>
             </div>
         <?php
         }
@@ -253,7 +255,7 @@ if (isset($_GET['search'])) {
     $sql = "SELECT id, nome, profissao FROM clientes ORDER BY id ASC";
     $result = $conn->query($sql);
  
-
+        $row["nome"];
     ?>
                    </div>
                 </div>
@@ -262,12 +264,7 @@ if (isset($_GET['search'])) {
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const openModalButtons = document.querySelectorAll('.product-card');
-            const modal = document.getElementById('modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalContent = document.getElementById('modal-content');
-            const fade = document.getElementById('fade');
+        
             
             openModalButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -279,12 +276,6 @@ if (isset($_GET['search'])) {
             closeModalButton.addEventListener('click', () => {
                 modal.classList.add('hide');
                 fade.classList.add('hide');
-
-
-                const clienteId = button.parentElement.parentElement.getAttribute('data-id');
-                const nome = "Nome do Cliente"; 
-                const profissao = "Profissão do Cliente";
-                const telefone = "Telefone do Cliente";
 
                 modal.classList.remove('hide');
                 fade.classList.remove('hide');

@@ -14,7 +14,8 @@ CREATE TABLE `clientes` (
   `email` varchar(64) DEFAULT NULL,
   `senha` varchar(64) DEFAULT NULL,
   `profissao` VARCHAR(30) notNULL,
-  `nome-trabalho` varchar(64) INT not NULL 
+  `nome-trabalho` varchar(64) INT not NULL,
+  `foto-perfil` varchar (500) not null,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
