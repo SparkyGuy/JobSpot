@@ -59,3 +59,9 @@
 </body>
 
 </html>
+
+
+(7, 'Rodrigo', 'Construções', 'ricardo.gomes@example.com', 'senha123qaz', 'Pedreiro', 'Construção Ágil', 'https://media.discordapp.net/attachments/1154149439812939940/1177707266791702718/transferir.jpg?ex=65737c5d&is=6561075d&hm=55c4bdf731445124cdc6980a8b63931b7529fea0327f0e7c0f8f609d70d564c2&=&format=webp&width=418&height=418','Precisando construir ou reformar, Rodrigo Construção!<br> Chama quem entende do assunto<br> 16 - 99978 - 4087<br> São Joaquim da Barra - SP'),
+(7, 'Rodrigo', 'Construções', 'ricardo.gomes@example.com', 'senha123qaz', 'Pedreiro', 'Construção Ágil', 'https://media.discordapp.net/attachments/1154149439812939940/1178025924059467887/WhatsApp_Image_2023-11-25_at_13.44.40.jpeg?ex=6574a522&is=65623022&hm=51eadf9c9b81b1915cddb1f0acee1998b6fb62841ab0dafa170ac3be3187e8eb&=&format=webp','🏠 Precisando construir ou reformar, Rodrigo Construção!<br>🤝 Chama quem entende do assunto<br>📲 16 - 99978 - 4087<br>📍 São Joaquim da Barra - SP'),
+
+`image1`, `image2`, `image3`, `image4`

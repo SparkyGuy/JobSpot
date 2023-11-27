@@ -53,18 +53,7 @@ include('../config/conexao.php');
             </form>
 		</div>
         </div>
-        <div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2>Detalhes do Cliente</h2>
-        <div id="modalData">
-        <?php echo $_SESSION['nome']; ?>
-        <?php echo $row['profissao']; ?>
-       
-            <!-- Dados do banco de dados serão inseridos aqui -->
-        </div>
-    </div>
-</div>
+
         <div class="btn">
             <button href="#" class="plus-button">
             <div id="tooltip-plus" class="hidden">
@@ -110,16 +99,18 @@ include('../config/conexao.php');
             <?php
             while ($row = $result->fetch_assoc()) {
             ?>
-                    <div class="product-card" id="open-modal" >
-                        <img src="<?php echo $row['foto-perfil']; ?>" alt="">
-                        <h4><?php echo $row["nome"]; ?></h4>
-                        <hr>
-                        <br>
-                        <h5><?php echo $row["profissao"]; ?></h5>
-                        <!--  <h6><?php echo $row["telefone"]; ?></h6> -->
-                        <div>
-                            <button id="open-modal">+</button>
-                        </div>
+                     <a href="detalhes_profissional.php?id=<?php echo $row['id']; ?>">
+                        <div class="product-card" >
+                            <img src="<?php echo $row['foto-perfil']; ?>" alt="">
+                            <h4><?php echo $row["nome"]; ?></h4>
+                            <hr>
+                            <br>
+                            <h5><?php echo $row["profissao"]; ?></h5>
+                            <!--  <h6><?php echo $row["telefone"]; ?></h6> -->
+                            <div>
+                                <button>+</button>
+                            </div>
+                    </a>
                 </div>
 
             <?php
@@ -140,8 +131,6 @@ include('../config/conexao.php');
         echo "Nenhum termo de pesquisa fornecido.";
     }
     ?>
-
-    <!-- Exibindo links de páginação -->
     </div>
     <div class="pagination">
         <?php
@@ -179,14 +168,6 @@ include('../config/conexao.php');
             echo "Nenhum resultado encontrado para a profissão: " . $search;
         }
         ?>
-        </div>
-    </div>
-    <div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2>Detalhes do Cliente</h2>
-        <div id="modalData">
-            <!-- Dados do banco de dados serão inseridos aqui -->
         </div>
     </div>
 </div>

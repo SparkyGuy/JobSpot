@@ -20,7 +20,7 @@ CREATE TABLE `clientes` (
 COMMIT;
 
 
-INSERT INTO clientes (id, nome, sobrenome, email, senha, profissao, `nome-trabalho`)
+INSERT INTO clientes (id, nome, sobrenome, email, senha, profissao, `nome-trabalho`, )
 VALUES
 (1, 'Carlos', 'Silva', 'carlos.silva@example.com', 'senha123xyz', 'Mecânico', 'Oficina do Carlos'),
 (2, 'Juliana', 'Martins', 'juliana.martins@example.com', 'senha456abc', 'Chaveiro', 'Chaves Express'),

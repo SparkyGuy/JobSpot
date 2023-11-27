@@ -692,6 +692,8 @@ input{
   border-radius: 10px;
   border: 1px solid #ccc; 
 }
+
+
 }
 
 
@@ -783,14 +785,8 @@ a{
   transition: transform 0.3s;
 }
 
-.detalhes-container{
-  padding: 30px;
-  width: 50%;
-}
 
-.detalhes-elemento{
 
-}
 .foto-perfil{
   text-align: center;
 }
@@ -810,3 +806,8 @@ a{
   font-size: 45px;
   color:#544384;
 }
+
+.product-card a{
+    text-decoration: none;
+    color:#544384;
+} 
