@@ -31,41 +31,68 @@ include('../config/conexao.php');
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Styles/resultado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" >
-    <script src="../script/teste.js" defer></script>
+    <script src="../script/scripts.js" defer></script>
 </head>
 <body>
     <nav>
-        <div >
-            <img src="../images/logo.png" class="logo">
+        <div class="logo" >
+            <a href="teste.php"> 
+                <h1> JobSpot </h1>
+            </div>
+            </a>
         </div>
         <div class="search-container">
 		<div class="search_wrap search_wrap_1">
 			<div class="search_box">
             <form action="resultados.php" method="GET">
 				<input type="text" name="search" class="input" placeholder="Pesquisar por Profissão">
-                <button class="btn btn_common" id="searchButton" type="submit"><i class="fas fa-search"></i></button>
+                <button class="btn btn_common" id="searchButton" type="submit"><i class="fas fa-search" id="open-modal"></i></button>
 				</div>
 			    </div>
             </form>
 		</div>
         </div>
 
+        <script>
+    const profilePicButton = document.querySelector('.profile-pic');
+    const tooltip = document.getElementById('tooltip');
+
+    profilePicButton.addEventListener('mouseover', () => {
+        tooltip.style.display = 'block';
+    });
+
+    profilePicButton.addEventListener('mouseout', () => {
+        tooltip.style.display = 'none';
+    });
+
+    const plusButton = document.querySelector('.plus-button');
+    const tooltipPlus = document.getElementById('tooltip-plus');
+
+    plusButton.addEventListener('mouseover', () => {
+        tooltipPlus.style.display = 'block';
+    });
+
+    plusButton.addEventListener('mouseout', () => {
+        tooltipPlus.style.display = 'none';
+    });
+</script>
         <div class="btn">
             <button href="#" class="plus-button">
             <div id="tooltip-plus" class="hidden">
     <span id="tooltipTextPlus">Adicionar Profissão</span>
 </div>
-            <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px;"></i>
+            <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px; display:flex; background-color: rgb(236, 233, 233);"></i>
             </button>
             <button href="#" class="profile-pic">
             <div id="tooltip" class="hidden">
                 <span id="tooltipText"><?php echo $_SESSION['nome']; ?></span>
             </div>
-            <i class="fa-regular fa-user" style="color: #6e4474; font-size: 20px;"></i>
+            <i class="fa-regular fa-user" style="color: #6e4474; font-size: 20px; background-color: rgb(236, 233, 233);"></i>
             </button>
         </div>
     </nav>
@@ -91,8 +118,9 @@ include('../config/conexao.php');
 
         if ($result->num_rows > 0) {
         ?>
-
-                <h5>Exibindo resultados para <?php echo $search; ?></h5>
+                <div class="resultados">
+                    <h5>Exibindo resultados para <?php echo $search; ?></h5>
+                </div>
              
             <br>
             <div class="product-card-container">

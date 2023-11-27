@@ -332,6 +332,12 @@ align-items: center;
 margin-left: 4vh;
 }
 
+.container-modal{
+  display: inline-block;
+  margin: 2vh;
+  align-items: center;
+  margin-left: 4vh;
+  }
 .outdoor{
 align-items: center;
 margin-top: 5vh;
@@ -728,7 +734,19 @@ color:#544384;
   box-sizing: border-box;
   display: inline-block;
 }
-
+.logo h1 {
+  font-weight: lighter;
+  font-size: larger;
+  color: #544384;
+  font-family: 'Comfortaa', sans-serif;
+}
+.logo {
+  font-weight: lighter;
+  font-size: larger;
+  color: #544384;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.5em;
+}
 
 .detalhes-container2{
   width: 48%;

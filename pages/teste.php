@@ -82,7 +82,7 @@ if (isset($_GET['search'])) {
             <div id="tooltip-plus" class="hidden">
                 <span id="tooltipTextPlus">Adicionar Profissão</span>
             </div>
-            <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px;"></i>
+            <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px;" id="open-modal"></i>
             </button>
             <button href="#" class="profile-pic">
             <div id="tooltip" class="hidden">
@@ -236,27 +236,70 @@ if (isset($_GET['search'])) {
         </div>
         <div class="modal-body">
             <div class="text"></div>
-            <div class="container">
-                <div class="elemento1" id="modal-content">
-                    
-                <?php 
-    
-    $search = "";
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "clientes";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+            <div class="container-modal">
+                <div id="modal-content">
+                    <div class="text-modal">
+                            <h1>Adicionar Profissão</h1>
+                    </div>
+                    <div class="modal-form">
+                        <div class="form-container">
+                            <form method="POST" onsubmit="sendEmail(); reset(); return false;">
+                                <input type="nome-modal" class="nome-modal" id="nome" name="nome-modal" placeholder='Nome'></input>
+                                <input type="text" class="modal-sobrenome" id="sobrenome" name="email" placeholder='Sobrenome'></input>
+                                <input type="text" class="modal-email"  id="email"name="email" placeholder='E-mail'></input>
+                                <input type="text" class="modal-profissao"id="profissao" name="email" placeholder='Profissão'></input>
+                                <input type="text" class="modal-insta"id="instagram" name="instagram" placeholder='Instagram'></input>
+                                <input type="tel" class="modal-whatsapp" id="whatsapp" name="whatsapp" placeholder='Whatsapp'></input>
+                                <input type="text" class="modal-descricao" id="descricao"name="descricao" placeholder='Descrição' style=" width: 124vh; height: 80px;"></input>
 
-    if ($conn->connect_error) {
-        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
-    }
+                                <div class="img-container">   
+                                    <input type="file" class="email" name="email" style="background-color:#fff; border:none;display:inline-block;"></input>
+                                    <h1>Foto de perfil</h1>
+                                </div>
+                                <div class="img-container">   
+                                    <input type="file" class="email" name="email" style=" background-color:#fff;border:none;display:inline-block;"></input>
+                                    <h1>Imagens</h1>
+                                </div>
+                                <div class="button-submit">
+                                    <button type="submit">Enviar Solicitação</button>
+                                </div>
+                       <!--              <input type="file" class="email" name="email" style="border:none;display:inline-block;"></input>
+                                <br>
+                                    <div class="img-container">    
+                            <div class="text-modal-image" style="padding-right: 300px;">
+                                <h1 style="display:inline-block;">Foto de Perfil</h1>
+                            </div>
+                            <div class="text-modal-image">
+                                <h1 style="display:inline-block;" style="padding-left: 350px;">Imagens</h1>
+                            </div> -->
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script>
+                        function sendEmail(){
+                            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "jobspot3ds@gmail.com",
+    Password : "3425CB1D28A8C41F0C632F9D26B1B7C0F88C",
+    To : document.getElementById("email").value,
+    From : "jobspot3ds@gmail.com",
+    Subject : "Resposta do Formulário da adição de perfil",
+    Body : "Solicitação de Criação de Perfil"
+            +"<br> <br> Nome: "+document.getElementById("nome").value
+            +"<br> Sobrenome: "+document.getElementById("sobrenome").value
+            +"<br> Email: "+document.getElementById("email").value
+            +"<br> Profissão: "+document.getElementById("profissao").value
+            +"<br> Instagram: "+document.getElementById("instagram").value
+            +"<br> Whatsapp: "+document.getElementById("whatsapp").value
+            +"<br> Descricao: "+document.getElementById("descricao").value 
+            +"<br> <br> Sua Solicitação de criação de perfil profissional está sendo avaliada pela nossa equipe, retornaremos com um email assim que possivel"
+}).then(
+  message => alert("Seu Email foi enviado com sucesso! Verifique sua caixa de email para mais informações")
+);
 
-    $sql = "SELECT id, nome, profissao FROM clientes ORDER BY id ASC";
-    $result = $conn->query($sql);
- 
-        $row["nome"];
-    ?>
+                        }
+                        </script>
+                    </form>
+                        </div>
+
                    </div>
                 </div>
             </div>
@@ -264,25 +307,25 @@ if (isset($_GET['search'])) {
     </div>
 
     <script>
-        
-            
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const fade = document.getElementById('fade');
+
             openModalButtons.forEach(button => {
                 button.addEventListener('click', () => {
+
                     modal.classList.remove('hide');
                     fade.classList.remove('hide');
                 });
             });
+
             const closeModalButton = document.querySelector('.close-modal-button');
             closeModalButton.addEventListener('click', () => {
                 modal.classList.add('hide');
                 fade.classList.add('hide');
-
-                modal.classList.remove('hide');
-                fade.classList.remove('hide');
-                modalContent.innerHTML = '';
-
-                
-
             });
         });
     </script>
