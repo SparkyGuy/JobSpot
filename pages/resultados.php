@@ -41,7 +41,7 @@ include('../config/conexao.php');
 <body>
     <nav>
         <div class="logo" >
-            <a href="teste.php"> 
+            <a href="homepage.php"> 
                 <h1> JobSpot </h1>
             </div>
             </a>

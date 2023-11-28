@@ -5,8 +5,6 @@ include('../config/conexao.php');
 
 if (isset($_GET['search'])) {
     $termoDePesquisa = $_GET['search'];
-
-
     $dbHost = 'localhost';
     $dbUser = 'root';
     $dbPassword = '';
@@ -84,7 +82,7 @@ if (isset($_GET['search'])) {
             <div id="tooltip-plus" class="hidden">
                 <span id="tooltipTextPlus">Adicionar Profissão</span>
             </div>
-            <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px;"></i>
+            <i class="fa-solid fa-plus" style="color: #6e4474; font-size: 20px;" id="open-modal"></i>
             </button>
             <button href="#" class="profile-pic">
             <div id="tooltip" class="hidden">
@@ -96,7 +94,7 @@ if (isset($_GET['search'])) {
     </nav>
 <div class="container">
     <div class="outdoor">
-    <img src="https://media.discordapp.net/attachments/639091185423482882/1174232181149814794/zoeira_5.png?ex=6566d7f0&is=655462f0&hm=851578dde1450f095366bf45d2ae21e219c8e3f356bb103765879ba23e7a24eb&=&width=776&height=323">
+    <img src="https://media.discordapp.net/attachments/639091185423482882/1174232181149814794/zoeira_5.png?ex=6566d7f0&is=655462f0&hm=851578dde1450f095366bf45d2ae21e219c8e3f356bb103765879ba23e7a24eb&=&width=1220&height=700">
 </div>
 <div class="icones-container">
     <div class="icones">
@@ -175,181 +173,162 @@ if (isset($_GET['search'])) {
 <div class="text-prof">
     <label> Profissionais </label>
 </div>
-<div class="card-container">
-    <div class="product-card" id="open-modal">
-        <img src="../images/rodrigo.jpg" alt="">
-        <h4>Rodrigo </h4>
-        <hr>
+<?php
+
+    $search = "";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "clientes";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+    }
+
+
+    $sql = "SELECT * FROM clientes LIMIT 6 ";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    ?>
         <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
+        <div class="product-card-container" data-nome="<?php echo $row["nome"]; ?>" data-profissao="<?php echo $row["profissao"]; ?>" data-telefone="<?php echo $row["telefone"]; ?>">
+        <?php
+        while ($row = $result->fetch_assoc()) {
 
-        <div>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
+        ?>
 
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal" >+</button>
-        </div>
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>    
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="">
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>   
-    </div>
-
-    <div class="product-card" id="open-modal">
-        <img src="../images/pedreiro.jpg" alt="" >
-        <h4>João Gomes</h4>
-        <hr>
-        <br>
-        <h5>Pedreiro</h5>
-            <h6>(16)99119-0088</h6>
-
-        <div>
-            <span></span>
-            <button id="open-modal">+</button>
-        </div>
-    </div>
-</div>
-<script>
-    const profilePicButton = document.querySelector('.profile-pic');
-    const tooltip = document.getElementById('tooltip');
-
-    profilePicButton.addEventListener('mouseover', () => {
-        tooltip.style.display = 'block';
-    });
-
-    profilePicButton.addEventListener('mouseout', () => {
-        tooltip.style.display = 'none';
-    });
-
-    const plusButton = document.querySelector('.plus-button');
-    const tooltipPlus = document.getElementById('tooltip-plus');
-
-    plusButton.addEventListener('mouseover', () => {
-        tooltipPlus.style.display = 'block';
-    });
-
-    plusButton.addEventListener('mouseout', () => {
-        tooltipPlus.style.display = 'none';
-    });
-</script>
-
-<div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
-      <div class="modal-header">
-        <div class="invisivel">
-            <h2>João Gomes - Pedreiro</h2>
-        </div>
-        <button id="close-modal">
-        <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="cointainer">
-            <div class="elemento1">
-                <div class="profile-pic-modal">
-                    <img src="../images/rodrigo.jpg" alt="">
-                </div>
-                <div class="name-profile">
-                    <h4>Rodrigo Construção</h4>
-                </div>
-                <div class="desc">
-                    <h2>
-                        🏠 Precisando construir ou reformar, Rodrigo Construção!<br>
-                        🤝 Chama quem entende do assunto<br>
-                        📲 16 - 99978 - 4087<br>
-                        📍 São Joaquim da Barra - SP    
-                    </h2>
-                </div>
-                    <div class="links-container">
-                        <h3>Contato</h3>
-                        <div class="links">
-                            <a href="https://api.whatsapp.com/send/?phone=5516999784087"> <i class="fa-brands fa-whatsapp fa-2xl" style="color: #6e4474;"></i> </a>
-                            <a href="https://www.instagram.com/rodrigoconstrucao_/"><i class="fa-brands fa-instagram fa-2xl"style="color: #6e4474;"></i> </a>
-                            <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #6e4474;"></i>
-                        </div>
+    
+                <div class="product-card" id="open-modal"  data-id="<?php echo $row['id']; ?>">
+                <a href="detalhes_profissional.php?id=<?php echo $row['id']; ?>">
+                    <img src="<?php echo $row['foto-perfil']; ?>" alt="">
+                    <h4><?php echo $row["nome"]; ?></h4>
+                    <hr>
+                    <br>
+                    <h5><?php echo $row["profissao"]?></h5>
+                    <div>
+                        <button class="open-modal-button" onclick="openModal(this)">+</button>
                     </div>
+                </a>
             </div>
-            <div class="elemento2">
-            <div class="carousel">
-                <button class="carousel__prev"><i class="fa-solid fa-angle-left"></i></button>
-                <div class="carousel__container">
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d1-e0901ddab8ccfc0dd8d1ead154b47259/views/imgo" alt="Imagem 1">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d2-c46dc02c2d6890f43be254d7a7db405e/views/imgo" alt="Imagem 2">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d4-fede72f9c28236f339d932869fbaa5ef/views/imgpsh_fullsize" alt="Imagem 3">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d4-1fc1f2ffc22521b67d2c26a1eec9f050/views/imgo" alt="Imagem 4">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://br-prod.asyncgw.teams.microsoft.com/v1/objects/0-brse-d3-a706e6f9b869b1bd7e8ec01fdc8af697/views/imgo" alt="Imagem 5">
-                  </div>
+        <?php
+        }
+    } else {
+        ?>
+         <h5 class="no-result">"Nenhum resultado encontrado para a profissão: <?php. $search;?> </h5>
+        <?php
+    }
+
+    $conn->close();
+
+
+?>
+<div id="fade"class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <div class="invisivel">
+            </div>
+            <div class="close-modal-btn">
+                <button class="close-modal-button">
+                    <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="text"></div>
+            <div class="container-modal">
+                <div id="modal-content">
+                    <div class="text-modal">
+                            <h1>Adicionar Profissão</h1>
+                    </div>
+                    <div class="modal-form">
+                        <div class="form-container">
+                            <form method="POST" onsubmit="sendEmail(); reset(); return false;">
+                                <input type="nome-modal" class="nome-modal" id="nome" name="nome-modal" placeholder='Nome'></input>
+                                <input type="text" class="modal-sobrenome" id="sobrenome" name="email" placeholder='Sobrenome'></input>
+                                <input type="text" class="modal-email"  id="email"name="email" placeholder='E-mail'></input>
+                                <input type="text" class="modal-profissao"id="profissao" name="email" placeholder='Profissão'></input>
+                                <input type="text" class="modal-insta"id="instagram" name="instagram" placeholder='Instagram'></input>
+                                <input type="tel" class="modal-whatsapp" id="whatsapp" name="whatsapp" placeholder='Whatsapp'></input>
+                                <input type="text" class="modal-descricao" id="descricao"name="descricao" placeholder='Descrição' style=" width: 124vh; height: 80px;"></input>
+
+                                <div class="img-container">   
+                                    <input type="file" class="email" name="email" style="background-color:#fff; border:none;display:inline-block;"></input>
+                                    <h1>Foto de perfil</h1>
+                                </div>
+                                <div class="img-container">   
+                                    <input type="file" class="email" name="email" style=" background-color:#fff;border:none;display:inline-block;"></input>
+                                    <h1>Imagens</h1>
+                                </div>
+                                <div class="button-submit">
+                                    <button type="submit">Enviar Solicitação</button>
+                                </div>
+                       <!--              <input type="file" class="email" name="email" style="border:none;display:inline-block;"></input>
+                                <br>
+                                    <div class="img-container">    
+                            <div class="text-modal-image" style="padding-right: 300px;">
+                                <h1 style="display:inline-block;">Foto de Perfil</h1>
+                            </div>
+                            <div class="text-modal-image">
+                                <h1 style="display:inline-block;" style="padding-left: 350px;">Imagens</h1>
+                            </div> -->
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script>
+                        function sendEmail(){
+                            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "jobspot3ds@gmail.com",
+    Password : "3425CB1D28A8C41F0C632F9D26B1B7C0F88C",
+    To : document.getElementById("email").value,
+    From : "jobspot3ds@gmail.com",
+    Subject : "Seu Perfil está sob análise",
+    Body : "Solicitação de Criação de Perfil"
+            +"<br> <br> Nome: "+document.getElementById("nome").value
+            +"<br> Sobrenome: "+document.getElementById("sobrenome").value
+            +"<br> Email: "+document.getElementById("email").value
+            +"<br> Profissão: "+document.getElementById("profissao").value
+            +"<br> Instagram: "+document.getElementById("instagram").value
+            +"<br> Whatsapp: "+document.getElementById("whatsapp").value
+            +"<br> Descricao: "+document.getElementById("descricao").value 
+            +"<br> <br> Sua Solicitação de criação de perfil profissional está sendo avaliada pela nossa equipe, retornaremos com um email assim que possivel"
+}).then(
+  message => alert("Seu Email foi enviado com sucesso! Verifique sua caixa de email para mais informações")
+);
+
+                        }
+                        </script>
+                    </form>
+                        </div>
+
+                   </div>
                 </div>
-                <button class="carousel__next"><i class="fa-solid fa-angle-left"></i></button>
             </div>
-            <div class="indicator-container">
-            <ul class="carousel__indicators">
-                    <li class="carousel__indicator active"></li>
-                    <li class="carousel__indicator"></li>
-                    <li class="carousel__indicator"></li>
-                    <li class="carousel__indicator"></li>
-                    <li class="carousel__indicator"></li>
-                </ul>
-            </div>
-            </div>
-      </div>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const fade = document.getElementById('fade');
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+
+                    modal.classList.remove('hide');
+                    fade.classList.remove('hide');
+                });
+            });
+
+            const closeModalButton = document.querySelector('.close-modal-button');
+            closeModalButton.addEventListener('click', () => {
+                modal.classList.add('hide');
+                fade.classList.add('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>

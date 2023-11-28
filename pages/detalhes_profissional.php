@@ -65,7 +65,9 @@ if ($result->num_rows > 0) {
 <nav>
         <div >
             <div class="logo">
-                <h1>JobSpot</h1>
+                <a href="homepage.php"> 
+                    <h1>JobSpot</h1>
+                </a>
             </div>
         </div>
         <div class="search-container">
